@@ -15,6 +15,8 @@
   
  [AWS Lambda](./CONTENT.md#aws-lambda) :AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources for you.
  
+![lambda](https://user-images.githubusercontent.com/42317258/87825870-85e0b580-c895-11ea-97fb-2158ca18c05f.png)
+
 <li>What exactly are we going to do? <br>
 <li>Linux <br>
 <li>What is Docker? <br>
