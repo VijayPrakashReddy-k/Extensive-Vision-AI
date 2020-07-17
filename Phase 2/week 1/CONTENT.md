@@ -84,7 +84,7 @@
 <h2>Assignment</h2>
 </section>
 
-`The result from the Mobilenet V2 model can be shown in the below INSOMNIA screen shot :`
+`The result from the Mobilenet V2 model can be shown in the below INSOMNIA screen shot and image got predicted as 208 class :`
 
-![Model-prediction](./Images/Yellow-Labrador-Retriever.jpg)
+![Model-prediction](./Assignment/S1_Assignment.png)
 
