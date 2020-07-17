@@ -32,3 +32,26 @@
 - It uses Amazon CloudFormation under the hood, which allows you to describe and provision all the infrastructural resources you need using a single JSON file. Once we define this file, all resources will be created in the cloud for us. 
 
 ![serverless-steps](https://user-images.githubusercontent.com/42317258/87466908-b7a71180-c634-11ea-9a63-bc07b7581efc.png)
+
+<section id="aws-lambda">
+<h2>AWS Lambda</h2>
+</section>
+
+- `AWS Lambda lets you run code without provisioning or managing servers.` <br>
+- `You pay only for the compute time you consume - there is no charge when your code is not running` <br>
+- `It automatically scales your application by running code in response to each trigger. Your code runs in parallel and process each trigger individually, scaling precisely with the size of the workload` <br>
+- `You are charged for every 100ms your code executes and Can be triggered by different events (e.g. HTTP request)`
+
+- ***`Your function code and it's dependencies shouldn't be greater than 250MB (deployment package .zip file)`***
+
+**Features :**
+            
+            Runs on Amazon Linux OS, inside a runtime container
+            The more RAM memory you allocate, the faster CPU you get:
+            from 128MB to 3008 MB, in 64 increments
+            Max. 500MB of storage inside /tmp directory (where your code/files can expand)
+            
+ *Free Tier:*
+            
+            1 million requests per month ($0.0000002 per requests thereafter)
+            400,000 GB-seconds of compute time per month ($0.000000208 for every 100ms used thereafter, 128 MB of RAM)
