@@ -19,24 +19,8 @@
 
 <li>Deploying a DNN Model <br>
   
- [Deploying a DNN Model](./CONTENT.md#dnn-model-deploy) :AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources for you.
+ [Deploying a DNN Model](./CONTENT.md#dnn-model-deploy) : The architecture of the model, we are building will look like this.
  
-![lambda](https://user-images.githubusercontent.com/42317258/87825870-85e0b580-c895-11ea-97fb-2158ca18c05f.png)
+![DNN model process](https://user-images.githubusercontent.com/42317258/87827196-00aad000-c898-11ea-8654-25a98c5a25b8.png)
 
-<li>What exactly are we going to do? <br>
-<li>Linux <br>
-<li>What is Docker? <br>
-<li>Very important Boring Steps. <br>
-<li>Hello TSAI from Lambda <br>
-<li>Deploying a DNN Model: <br>
-<li>download a pre-trained resnet34 model <br>
-<li>create a Python Lambda function <br>
-<li>Python requirements plugin <br>
-<li>adding requirements <br>
-<li>handler.py and our main code <br>
-<li>create an S3 bucket and move your model <br>
-<li>configuring the serverless.yml <br>
-<li>deploying <br>
-<li>multipart/form-data <br>
-<li>testing our deployment <br>
 <li>Assignment <br>
