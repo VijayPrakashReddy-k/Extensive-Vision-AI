@@ -80,5 +80,11 @@
 
 ![Deploy DNN model](https://user-images.githubusercontent.com/42317258/87827211-0bfdfb80-c898-11ea-8002-3a43a2d5e9da.png)
 
+<section id="assignment">
+<h2>Assignment</h2>
+</section>
 
+`The result from the Mobilenet V2 model can be shown in the below INSOMNIA screen shot :`
+
+![Model-prediction](./Images/Yellow-Labrador-Retriever.jpg)
 
