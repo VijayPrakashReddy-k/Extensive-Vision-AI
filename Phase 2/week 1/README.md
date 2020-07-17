@@ -17,7 +17,7 @@
  
 ![lambda](https://user-images.githubusercontent.com/42317258/87825870-85e0b580-c895-11ea-97fb-2158ca18c05f.png)
 
-<li>Deploying a DNN Model <br>
+<li>Deploying a DNN model <br>
   
  [Deploying a DNN model](./CONTENT.md#dnn-model-deploy) : The architecture of the model, we are building will look like this.
  
