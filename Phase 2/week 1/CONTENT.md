@@ -44,6 +44,8 @@
 
 - ***`Your function code and it's dependencies shouldn't be greater than 250MB (deployment package .zip file)`***
 
+![Lambda_usecases](https://user-images.githubusercontent.com/42317258/87825851-7fead480-c895-11ea-9fed-1ab8ef0a35e3.png)
+
 **Features :**
             
             Runs on Amazon Linux OS, inside a runtime container
