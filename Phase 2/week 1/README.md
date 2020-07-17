@@ -19,7 +19,7 @@
 
 <li>Deploying a DNN Model <br>
   
- [Deploying a DNN Model](./CONTENT.md#dnn-model-deploy) : The architecture of the model, we are building will look like this.
+ [Deploying a DNN model](./CONTENT.md#dnn-model-deploy) : The architecture of the model, we are building will look like this.
  
 ![DNN model process](https://user-images.githubusercontent.com/42317258/87827196-00aad000-c898-11ea-8654-25a98c5a25b8.png)
 
