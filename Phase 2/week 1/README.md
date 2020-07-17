@@ -24,3 +24,9 @@
 ![DNN model process](https://user-images.githubusercontent.com/42317258/87827196-00aad000-c898-11ea-8654-25a98c5a25b8.png)
 
 <li>Assignment <br>
+
+  *`Deploy MobileNet V2 model, into AWS and predict the class of below Image`*
+  
+![Test-image](./Images/Yellow-Labrador-Retriever.jpg)
+
+[Assignment](./CONTENT.md#assignment)
