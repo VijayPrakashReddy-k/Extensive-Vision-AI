@@ -57,3 +57,46 @@
             
             1 million requests per month ($0.0000002 per requests thereafter)
             400,000 GB-seconds of compute time per month ($0.000000208 for every 100ms used thereafter, 128 MB of RAM)
+
+<section id="dnn-model-deploy">
+<h2>Deploying a DNN model</h2>
+</section>
+
+**Steps :**
+<ol>
+<li> Download a pre-trained model (downloading mobilenet v2 as assignment)
+<li> create a Python Lambda function (AWS - python3)
+<li> Python requirements plugin (for bundling all the libraries required)
+<li> Adding requirements (adding pyhton library wheel links for size < 250 MB)
+<li> handler.py (2 files will get created once completing the creation of service {lambda function})
+<li> create an S3 bucket and move your model into the bucket
+<li> configuring the serverless.yml
+<li> deploying
+      
+            serverless deploy
+            
+<li> multipart/form-data (we are sending image interms of bytes, so make changes in AWS cloudwatch settings)
+<li> testing our deployment (with help of INSOMNIA by passing image as input)
+
+![Deploy DNN model](https://user-images.githubusercontent.com/42317258/87827211-0bfdfb80-c898-11ea-8002-3a43a2d5e9da.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
