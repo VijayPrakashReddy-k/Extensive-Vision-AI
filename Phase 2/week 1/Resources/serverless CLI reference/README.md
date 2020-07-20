@@ -2,7 +2,7 @@
 
 #### CLI reference:
 
-[config credentials](server.png)
+[config credentials](sls_aws_config.png)
 
 <li>create
 <li>install
