@@ -4,6 +4,9 @@ When i pass the [Image](./Assignment/Yellow-Labrador-Retriever.jpg), to the mode
 
 ![Insomnia Output](S1_Assignment.png)
 
+![S1 output](https://user-images.githubusercontent.com/42317258/87965543-88cbe800-cad9-11ea-8280-17b72b4b085f.png)
+
+
 ## Output :
       {
         "file": "Yellow-Labrador-Retriever.jpg",
