@@ -1,8 +1,9 @@
 ### Serverless CLI (Command Line Interface) references :
 
 #### CLI reference:
-<ul>
-<li>config credentials
+
+[config credentials](server.png)
+
 <li>create
 <li>install
 <li>package
