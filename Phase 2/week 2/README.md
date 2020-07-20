@@ -13,6 +13,9 @@
 
 <li>Simple Old Tricks
   
+  ![old trics](https://user-images.githubusercontent.com/42317258/87968141-94b9a900-cadd-11ea-87a1-13dbfe61fefa.png)
+
+  
 <li>SqueezeNet
   
 <li>MobileNetV1
