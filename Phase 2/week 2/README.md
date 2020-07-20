@@ -18,6 +18,9 @@
   
 <li>SqueezeNet
   
+  ![squeezenet](https://user-images.githubusercontent.com/42317258/87968590-4a84f780-cade-11ea-9baf-b8c3353fbe94.png)
+
+  
 <li>MobileNetV1
   
 <li>Quantization
