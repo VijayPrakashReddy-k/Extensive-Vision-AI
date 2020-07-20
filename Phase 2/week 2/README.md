@@ -7,6 +7,9 @@
 **`Week 2 Contents:`**
 <ul>
 <li>Cloud vs Mobile Neural Nets
+  
+  ![Cloud vs Mobile NN](https://user-images.githubusercontent.com/42317258/87967718-e150b480-cadc-11ea-8ab8-a1c81906b91d.png)
+
 
 <li>Simple Old Tricks
   
