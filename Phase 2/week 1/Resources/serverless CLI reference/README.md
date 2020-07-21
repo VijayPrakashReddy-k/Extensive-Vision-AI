@@ -2,6 +2,8 @@
 
 #### CLI reference:
 
+**Config Credentials**
+
 ![config credentials](sls_aws_config.png)
 
 <li>create
