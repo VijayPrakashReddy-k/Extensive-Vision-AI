@@ -6,7 +6,11 @@
 
 ![config credentials](sls_aws_config.png)
 
-<li>create
+**Create Service**
+
+![create service](sls_create_service.png)
+
+
 <li>install
 <li>package
 <li>deploy
