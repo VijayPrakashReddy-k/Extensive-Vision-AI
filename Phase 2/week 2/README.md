@@ -28,6 +28,8 @@
       
       Downsample late to keep a big feature map.
       
+ [more about squeezenet](.CONTENT.md#squeeze_nets)
+      
 ### The advantages of SqueezeNet over Alexnet :
       
 ![squeezenet_alexnet_compare](https://user-images.githubusercontent.com/42317258/88101047-12071b80-cbbb-11ea-9930-4b3aa076a3d8.png)
