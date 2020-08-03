@@ -35,11 +35,26 @@
 ![squeezenet_alexnet_compare](https://user-images.githubusercontent.com/42317258/88101047-12071b80-cbbb-11ea-9930-4b3aa076a3d8.png)
 
   
-<li>MobileNetV1
-  
+### MobileNetV1 [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017307/MobileNets.Efficient.Convolutional.Neural.Networks.for.Mobile.Vision.pdf)
+
+- A class of efficient models for mobile and embedded vision applications
+- Based on depth-wise separable convolutions
+ 
+
+*`Author: For MobileNets the depthwise convolution applies a single filter to each input channel. The pointwise convolution then applies a 1×1 convolution to combine the outputs of the depthwise convolution. A standard convolution both filters and combines inputs into a new set of outputs in one step. The depthwise separable convolution splits this into two layers, a separate layer for filtering and a separate layer for combining. This factorization has the effect of drastically reducing computation and model size.`* 
+
+                                   Normal Convolution
+                                   
+![Normal](https://user-images.githubusercontent.com/42317258/89209152-60fd7980-d5db-11ea-991f-45e7b662f08d.gif)
+
+                                   Depthwise Separable Convolution
+
+[mobilenet v1 architecture](./CONTENT.md#mobilenet_v1)
+
 <li>Quantization
   
-ShuffleNet
+### ShuffleNet [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017309/ShuffleNet.An.Extremely.Efficient.Convolutional.Neural.Network.for.Mobile.pdf)
+
 Channel Shuffle
 ShuffleNet Unit
 ShuffleNet Architecture
