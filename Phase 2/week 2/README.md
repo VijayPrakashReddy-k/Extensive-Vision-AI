@@ -28,7 +28,7 @@
       
       Downsample late to keep a big feature map.
       
- [more about squeezenet](./CONTENT.md#squeeze_nets)
+ ![more about squeezenet](./CONTENT.md#squeeze_nets)
       
 ### The advantages of SqueezeNet over Alexnet :
       
@@ -53,7 +53,7 @@
 
 ![depthwise_convs](https://user-images.githubusercontent.com/42317258/89256757-75289180-d642-11ea-8be3-116d696fe7d9.gif)
 
-[mobilenet v1 architecture](./CONTENT.md#mobilenet_v1)
+![mobilenet v1 architecture](./CONTENT.md#mobilenet_v1)
 
 <li>Quantization
   
