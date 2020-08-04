@@ -48,6 +48,7 @@ Thus, the computation reduction is:
                 
 - ***`When DK×DK is 3×3, 8 to 9 times less computation can be achieved, but with only small reduction in accuracy.`***
 
+#### Architecture:
 
 *`MobileNetV1 is from Google. Depthwise Separable Convolution is used to reduce the model size and complexity. It is particularly useful for mobile and embedded vision applications.`*
 
@@ -80,13 +81,42 @@ This goes on for a while until the original 224×224 image is shrunk down to 7×
 
 ![global_average_pooling](https://user-images.githubusercontent.com/42317258/89289131-5ba03d80-d674-11ea-8dfe-8343d3898a60.png)
 
+        Global Average Pooling
+
 If we’re using MobileNets as a classifier, for example on ImageNet which has 1000 possible categories, then the final layer is a fully-connected layer with a softmax and 1000 outputs. If you wanted to use MobileNets on a different dataset, or as a feature extractor instead of classifier, you’d use some other final layer instead.
 
 Even though MobileNets is designed to be pretty fast already, it’s possible to use a reduced version of this network architecture. There are three hyperparameters you can set that determine the size of the network:
 
 - **Width multiplier (the paper calls this “alpha”):** This shrinks the number of channels. If the width multiplier is 1, the network starts off with 32 channels and ends up with 1024.
 
+`Width Multiplier α for Thinner Models:`
+Width Multiplier α(alpha) is introduced to control the **input width of a layer**, which makes M become αM. And the depthwise separable convolution cost become:
+
+![alpha-thinner layers](https://user-images.githubusercontent.com/42317258/89324755-6921eb80-d6a5-11ea-9d10-5bb21f571e93.png)
+
+        Depthwise Separable Convolution Cost with Width Multiplier α
+`where α is between 0 to 1, with typical settings of 1, 0.75, 0.5 and 0.25. When α=1, it is the baseline MobileNet. And the computational cost and the number of parameters can be reduced quadratically by roughly α².`
+
+![alpha-results](https://user-images.githubusercontent.com/42317258/89324743-67582800-d6a5-11ea-9fe2-c2610af7f7bf.png)
+
+        Different Values of Width Multiplier α
+
+**Accuracy drops off smoothly from α=1 to 0.5 until α=0.25 which is too small.**
+
 - **Resolution multiplier (“rho” in the paper):** This shrinks the dimensions of the input image. The default input size is 224×224 pixels.
+
+`Resolution Multiplier ρ for Reduced Representation:`
+Resolution Multiplier ρ(rho) is introduced to control the **input image resolution of the network**, with Resolution Multiplier ρ, the cost become:
+
+![rho-input-dimensions](https://user-images.githubusercontent.com/42317258/89325904-18ab8d80-d6a7-11ea-9af8-a6f0099f64a3.png)
+
+        Depthwise Separable Convolution Cost with Both Width Multiplier α and Resolution Multiplier ρ
+        
+`where ρ is between 0 to 1. And the input resolution is 224, 192, 160, and 128. When ρ=1, it is the baseline MobileNet.`
+
+![rho-results](https://user-images.githubusercontent.com/42317258/89325909-1a755100-d6a7-11ea-95c2-48f31e157e2a.png)
+
+**Accuracy drops off smoothly across resolution from 224 to 128.**
 
 - **Shallow or deep:** The full network has a group of 5 layers in the middle that you can leave out.
 
