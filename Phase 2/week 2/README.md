@@ -35,7 +35,9 @@
 ![squeezenet_alexnet_compare](https://user-images.githubusercontent.com/42317258/88101047-12071b80-cbbb-11ea-9930-4b3aa076a3d8.png)
 
   
-### MobileNetV1 [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017307/MobileNets.Efficient.Convolutional.Neural.Networks.for.Mobile.Vision.pdf)
+<li> MobileNetV1 <br>
+
+[Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017307/MobileNets.Efficient.Convolutional.Neural.Networks.for.Mobile.Vision.pdf)
 
 - A class of efficient models for mobile and embedded vision applications
 - Based on depth-wise separable convolutions
@@ -49,11 +51,15 @@
 
                                    Depthwise Separable Convolution
 
+![depthwise_convs](https://user-images.githubusercontent.com/42317258/89256757-75289180-d642-11ea-8be3-116d696fe7d9.gif)
+
 [mobilenet v1 architecture](./CONTENT.md#mobilenet_v1)
 
 <li>Quantization
   
-### ShuffleNet [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017309/ShuffleNet.An.Extremely.Efficient.Convolutional.Neural.Network.for.Mobile.pdf)
+<li> ShuffleNet <br>
+
+[Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017309/ShuffleNet.An.Extremely.Efficient.Convolutional.Neural.Network.for.Mobile.pdf)
 
 Channel Shuffle
 ShuffleNet Unit
