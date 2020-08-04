@@ -8,7 +8,7 @@
 ![squeezenet_architecture](https://user-images.githubusercontent.com/42317258/88203902-20f7d780-cc68-11ea-8577-08bb12757ab8.png)
 ![squeeze_ratio](https://user-images.githubusercontent.com/42317258/88203915-23f2c800-cc68-11ea-8f37-d15d411e9feb.png)
 
-<section id="mobilenetv1_architecture">
+<section id="mobilenet_v1">
 <h2>Mobilenet v1</h2>
 </section>
 
