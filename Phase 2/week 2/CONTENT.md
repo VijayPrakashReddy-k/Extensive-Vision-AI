@@ -118,8 +118,12 @@ Resolution Multiplier ρ(rho) is introduced to control the **input image resolut
 
 **Accuracy drops off smoothly across resolution from 224 to 128.**
 
+![Width-and-resolution-multiplier](https://user-images.githubusercontent.com/42317258/89438032-f0369880-d765-11ea-9152-5f1c5e9a64dd.png)
+
 - **Shallow or deep:** The full network has a group of 5 layers in the middle that you can leave out.
 
 These settings can be used to make the network smaller — and therefore faster — but at the cost of prediction accuracy. (If you’re curious, the paper shows the effects of changing these hyperparameters on the accuracy.)
 
 For the full network the total number of learned parameters is 4,221,032 (after folding the batch normalization layers). That’s certainly a lot less than VGGNet, which has over 130 million!
+
+![model-results](https://user-images.githubusercontent.com/42317258/89438049-f462b600-d765-11ea-9771-10349795c75d.png)
