@@ -127,3 +127,54 @@ These settings can be used to make the network smaller — and therefore faster 
 For the full network the total number of learned parameters is 4,221,032 (after folding the batch normalization layers). That’s certainly a lot less than VGGNet, which has over 130 million!
 
 ![model-results](https://user-images.githubusercontent.com/42317258/89438049-f462b600-d765-11ea-9771-10349795c75d.png)
+
+<section id="quantization">
+<h2>Quantization</h2>
+</section>
+
+#### Quantization has several other terminologies which could be similar in technique or concept.
+
+**1. Low precision or half precision floating point:** <br>
+Low precision could be the most generic concept. As normal precision uses FP32 (floating point of 32 bits which is single precision) to store model weights, low precision indicates numeric format such as FP16 (half precision floating point), INT8 (fixed point integer of 8 bits) and so on.<br>
+There is a tend that low precision means INT8 these days.
+
+![half-precision](https://user-images.githubusercontent.com/42317258/89677037-4c3a2200-d90a-11ea-902b-8dcf7bd3e8de.png)
+
+**2.Mixed Precision:**
+Mixed precision utilizes both FP32 and FP16 in model. FP16 reduces half of the memory size (which is a good thing), but some parameters/operators have to be in FP32 format to maitain accuracy.
+**Steps:**
+
+        1.Make an FP16 copy of the weights
+        2.Forward propagate using FP16 weights and activations
+        3.Multiply the resulting loss by the scale factor S
+        4.Backward propagate using FP16 weights, activations, and their gradients
+        5.Multiply the weight gradients by 1/S
+        6.Optionally process the weight gradients (gradient clipping, weight decay, etc.)
+        7.Update the master copy of weights in FP32
+
+**3.Quantization:**
+Quantization is basically INT8. Still, it has sub-categories depending on how many bits it takes to store one weight element. For example:
+
+- **Binary Neural Network:** Neural networks with binary weights and activations at run-time and when computing the parameters’ gradient at train-time.
+- **Ternary Weight Networks:** Neural networks with weights constrained to +1, 0 and -1.
+- **XNOR Network:** the filters and the input to convolutional layers are binary. XNOR-Networks approximate convolutions using primarily binary operations.
+
+***`Quantization process can be divided into two parts:`*** 
+
+    1.Converting model from FP32 to INT8, and 
+    
+![training-inferencing](https://user-images.githubusercontent.com/42317258/89678049-1f870a00-d90c-11ea-9cad-f09a45d89cb8.png)
+
+    2.Inferencing with INT8.
+    
+In 8 bit quantization, FP32 is replaced by INT8 during inference, while training is still FP32.
+
+![Quantized-model](https://user-images.githubusercontent.com/42317258/89678210-712f9480-d90c-11ea-84d0-9437e62dea65.png)
+
+### Training with Quantization:
+
+- learn ranges during training
+- forward pass - quantized values
+- backward pass - float values
+
+[Reference](https://jackwish.net/2019/neural-network-quantization-introduction.html)
