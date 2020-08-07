@@ -83,11 +83,12 @@
 
 [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017309/ShuffleNet.An.Extremely.Efficient.Convolutional.Neural.Network.for.Mobile.pdf)
 
-Channel Shuffle
-ShuffleNet Unit
-ShuffleNet Architecture
+- Channel Shuffle
+- ShuffleNet Unit
+- ShuffleNet Architecture
+
 Flops are not Reliable
 MobileNet V2
-
 ShuffleNet V2
+
 Assignment
