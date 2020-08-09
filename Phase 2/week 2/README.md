@@ -122,6 +122,11 @@ If we allow group convolutions to obtain input data from different groups (b), t
 - [ShuffleNet Unit](./CONTENT.md#shufflenet-unit) is designed for small networks.
 
 - [ShuffleNet Architecture](./CONTENT.md#shufflenet-architecture) is a stack of ShuffleNet units grouped into three stages.
+
+- [comparison](./CONTENT.md#comparison) between channel shuffle and No shuffle.
+
+- [model comparison](./CONTENT.md#model-comparison) between ShuffleNet vs MobileNet on ImageNet classification
+
 Flops are not Reliable
 MobileNet V2
 ShuffleNet V2
