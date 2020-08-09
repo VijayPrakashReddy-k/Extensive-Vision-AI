@@ -215,7 +215,7 @@ Let's understand, by example:
 ![shuffling-channels](https://user-images.githubusercontent.com/42317258/89733923-76105780-da76-11ea-8dbb-c474715b57ff.png)
 
 <section id="shufflenet-unit">
-<h3>Channel Shuffle</h3>
+<h3>ShuffleNet Unit</h3>
 </section>
 
 ![shufflenet unit](https://user-images.githubusercontent.com/42317258/89734080-69d8ca00-da77-11ea-99bb-1360528720ad.png)
