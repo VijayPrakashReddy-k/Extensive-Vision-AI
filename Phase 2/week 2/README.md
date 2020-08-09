@@ -127,7 +127,29 @@ If we allow group convolutions to obtain input data from different groups (b), t
 
 - [model comparison](./CONTENT.md#model-comparison) between ShuffleNet vs MobileNet on ImageNet classification
 
-Flops are not Reliable
+<li>Flops are not Reliable <br>
+  
+*`To measure the computation complexity, a widely used metric is the number of float-point operations or FLOPS. However, FLOPs are an indirect metric. It is an approximation of, but usually not equivalent to the direct metric that we rarely care about, such as the speed of latency. Such discrepancy has been noticed in many networks.`*
+
+For example, MobileNet V2 is must faster than NASNET, but they have comparable FLOPs. 
+
+![graphs](https://user-images.githubusercontent.com/42317258/89735573-25522c00-da81-11ea-980e-66a2a72d5895.png)
+
+ Measurement of accuracy (ImageNet classification on validation set), speed, and FLOPs of four network architectures on two hardware platforms with four different levels of computation complexities (see text for details). (a, c) GPU results, batch size = 8. (b, d) ARM results, batch size = 1. The best performing algorithm, our proposed ShuffleNet v2, is on the top right region, under all cases.
+ 
+ **There are three reasons for this discrepancy:** <br>
+
+- *First, several important factors that have a considerable effect on speed are not taken into account by FLOPs. One such factor is memory access cost (MAC). Such cost constitutes a large portion of run time in certain operations like group convolutions. It could be a bottleneck on devices with strong computation power (like GPUs).* <br>
+- *Another one is the degree of parallelism. A model with a high degree of parallelism could be much faster than another one with low.*<br>
+- *Finally, operations with the same FLOPs could have different running times, depending on the platform.*
+
+![pie-graph](https://user-images.githubusercontent.com/42317258/89735575-27b48600-da81-11ea-82d6-6287a8169243.png)
+
+***With these observations, we propose that two principles should be considered for effective network architecture design.*** <br>
+
+- First, the direct metric (e.g., speed) should be used instead of the indirect ones (e.g., FLOPs). <br>
+- Second, such metrics should be evaluated on the target platform. In this work, we follow the two principles and propose a more effective network architecture.
+
 MobileNet V2
 ShuffleNet V2
 
