@@ -268,3 +268,56 @@ Let's understand, by example:
 - ShuffleNets with SE modules boosting the top-1 error of ShuffleNet 2× to 24.7%, but are usually 25 to 40% slower than the “raw” ShuffleNets on mobile devices, which implies that actual speedup evaluation is critical on low-cost architecture design.
 
 [reference](https://medium.com/syncedreview/shufflenet-an-extremely-efficient-convolutional-neural-network-for-mobile-devices-72c6f5b01651)
+
+## MobileNet V2:
+
+<section id="inverted-residuals">
+<h3>Inverted Residuals</h3>
+</section>
+
+                            Residuals: this is original
+                            
+![residual](https://user-images.githubusercontent.com/42317258/89738051-43288c80-da93-11ea-9ae4-d1855f5a66a1.png)
+                   
+                            Inverted Residuals: 
+                            
+![inverted-residuals](https://user-images.githubusercontent.com/42317258/89738052-458ae680-da93-11ea-9b91-125a02594f1f.png)
+                            
+                            The inverted block has far fewer parameters
+                            
+<section id="bottlenecks">
+<h3>Linear Bottlenecks</h3>
+</section>
+
+The reason we use non-linear activation functions in neural networks is that multiple matrix multiplications cannot be reduced to a single numerical operation. It allows us to build neural networks that have multiple layers. At the same time the activation function ReLU, which is commonly used in neural networks, discards values that are smaller than 0. This loss of information can be tackled by increasing the number of channels in order to increase the capacity of the network.
+
+With inverted residual blocks, we do the opposite and squeeze the layers where the skip connections are linked. This hurts the performance of the network. The authors introduced the idea of a linear bottleneck where the last convolution of a residual block has a linear output before it’s added to the initial activations.
+
+![linear-bottlenecks](https://user-images.githubusercontent.com/42317258/89738114-b4683f80-da93-11ea-9ade-26d313d02b48.png)
+
+<section id="relu6">
+<h3>ReLU 6</h3>
+</section>
+
+The snippet above shows the structure of a convolutional block that incorporates inverted residuals and linear bottlenecks. 
+**If you want to match MobileNetV2 as closely as possible there are two other pieces you need.**
+
+- The first aspect simply adds Batch Normalization behind every convolutional layer as you’re probably used to by now anyways.<br>
+- The second addition is not quite as common. The authors use ReLU6 instead of ReLU, which limits the value of activations to a maximum of…well…6. The activation is linear as long as it’s between 0 and 6.
+
+![relu6](https://user-images.githubusercontent.com/42317258/89738169-3c4e4980-da94-11ea-88dd-e009e54877aa.png)
+
+- Channels in the architecture increases like:
+
+        224-3 >> 112-16 >> 56-24 >> 28-32 >> 14-64 >> 14-96 >> 7-160 >> 7-320 >> 1-1280
+        
+- But inside there may be an expansion factor of 6!
+- so 24 could be:
+
+        24 >> 144 >> 144>> 24
+        
+![models](https://user-images.githubusercontent.com/42317258/89738249-c9919e00-da94-11ea-9548-39033f454989.png)
+
+G1) Equal channel with minimizes memory access cost
+
+![arm-gpu](https://user-images.githubusercontent.com/42317258/89738233-b7affb00-da94-11ea-8d20-45c996ce9b1a.png)
