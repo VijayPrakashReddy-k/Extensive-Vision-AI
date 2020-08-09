@@ -220,7 +220,7 @@ Let's understand, by example:
 
 ![shufflenet unit](https://user-images.githubusercontent.com/42317258/89734080-69d8ca00-da77-11ea-99bb-1360528720ad.png)
 
-*(a) bottleneck unit with depthwise convolution (DWConv), (b) ShuffleNet unit with pointwise group convolution (GConv) and channel shuffle, (c) ShuffleNet unit with stride = 2.*
+*(a) bottleneck unit with depthwise convolution (DWConv), (b) ShuffleNet unit with pointwise group convolution (GConv) and channel shuffle,* **The purpose of the second pointwise group convolution is to recover the channel dimension to match the shortcut path.** *(c) ShuffleNet unit with stride = 2.*
 
 - **(a) Bottleneck Unit:** This is a standard residual bottleneck unit, but with depthwise convolution used. (Depthwise convolution is used in [MobileNetV1 source](https://towardsdatascience.com/review-mobilenetv1-depthwise-separable-convolution-light-weight-model-a382df364b69)) With 1×1 then 3×3 DW then 1×1 convolutions used, it can be also treated as a bottleneck type of depthwise separable convolution used in [MobileNetV2](https://towardsdatascience.com/review-mobilenetv2-light-weight-model-image-classification-8febb490e61c) <br>
 - **(b) ShuffleNet Unit:** The first and second 1×1 convolutions are replaced by group convolutions. A channel shuffle is applied after the first 1×1 convolution.<br>
@@ -229,3 +229,20 @@ Let's understand, by example:
 - Given the input c×h×w, and bottleneck channels m, [ResNet](https://towardsdatascience.com/review-resnet-winner-of-ilsvrc-2015-image-classification-localization-detection-e39402bfa5d8) unit requires hw(2cm+9m²) FLOPs and [ResNeXt](https://towardsdatascience.com/review-resnext-1st-runner-up-of-ilsvrc-2016-image-classification-15d7f17b42ac) requires hw(2cm+9m²/g) FLOPs, while **ShuffleNet only requires hw(2cm/g+9m) FLOPs** where g is the number of group convolutions.<br>
 - In other words, given a computational budget, **ShuffleNet can use wider feature maps**. We find this is **critical for small networks**, as tiny networks usually have an insufficient number of channels to process the information.<br>
 
+<section id="shufflenet-architecture">
+<h3>ShuffleNet Architecture</h3>
+</section>
+
+![shufflenet-architecture](https://user-images.githubusercontent.com/42317258/89734752-ab6b7400-da7b-11ea-91e8-bcc99700631a.png)
+
+- The proposed network is mainly composed of a stack of ShuffleNet units grouped into three stages.<br>
+- The number of bottleneck channels is set to 1/4 of the output channels for each ShuffleNet unit. <br>
+- A scale factor s is applied on the number of channels. The networks in the above table is denoted as “ShuffleNet 1×”, then ”ShuffleNet s×” means scaling the number of filters in ShuffleNet 1× by s times thus overall complexity will be roughly s² times of ShuffleNet 1×. <br>
+
+![model-complexity](https://user-images.githubusercontent.com/42317258/89734893-7ad80a00-da7c-11ea-9d8d-4838988a2ba6.png)
+
+- With g = 1, i.e. no pointwise group convolution.
+- Models with group convolutions (g > 1) consistently perform better than their counterparts without pointwise group convolutions (g = 1).
+- Smaller models tend to benefit more from groups.
+- For example, for ShuffleNet 1× the best entry (g = 8) is 1.2% better than the counterpart, while for ShuffleNet 0.5× and 0.25×, the gaps become 3.5% and 4.4% respectively.
+- For some models (e.g. ShuffleNet 0.5×) when **group numbers become relatively large (e.g. g = 8), the classification score saturates or even drops. With an increase in group number (thus wider feature maps), input channels for each convolutional filter become fewer, which may harm representation capability.**
