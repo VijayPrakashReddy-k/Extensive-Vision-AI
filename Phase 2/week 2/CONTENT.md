@@ -228,3 +228,8 @@ Let's understand, by example:
 - ReLU is not applied to 3x3 DWConv (Depthwise convolutions) <br>
 - Given the input c×h×w, and bottleneck channels m, ResNet (Links to an external site.) unit requires hw(2cm+9m²) FLOPs and ResNeXt (Links to an external site.) requires hw(2cm+9m²/g) FLOPs, while **ShuffleNet only requires hw(2cm/g+9m) FLOPs** where g is the number of group convolutions.<br>
 - In other words, given a computational budget, **ShuffleNet can use wider feature maps**. We find this is **critical for small networks**, as tiny networks usually have an insufficient number of channels to process the information.<br>
+
+[MobileNetV1 source](https://towardsdatascience.com/review-mobilenetv1-depthwise-separable-convolution-light-weight-model-a382df364b69)
+[MobileNetV2 source](https://towardsdatascience.com/review-mobilenetv2-light-weight-model-image-classification-8febb490e61c)
+[ResNet source](https://towardsdatascience.com/review-resnet-winner-of-ilsvrc-2015-image-classification-localization-detection-e39402bfa5d8)
+[ResNeXt source](https://towardsdatascience.com/review-resnext-1st-runner-up-of-ilsvrc-2016-image-classification-15d7f17b42ac)
