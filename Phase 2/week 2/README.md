@@ -150,7 +150,23 @@ For example, MobileNet V2 is must faster than NASNET, but they have comparable F
 - First, the direct metric (e.g., speed) should be used instead of the indirect ones (e.g., FLOPs). <br>
 - Second, such metrics should be evaluated on the target platform. In this work, we follow the two principles and propose a more effective network architecture.
 
-MobileNet V2
+<li> MobileNet V2
+  
+`MobileNetV2 builds upon the ideas from MobileNetV1, using depthwise separable convolution as efficient building blocks. However, V2 introduces two new features to the architecture:`
+
+- `1) linear bottlenecks between the layers, and` <br>
+- `2) shortcut connections between the bottlenecks
+
+![mobilenetv2-architecture](https://user-images.githubusercontent.com/42317258/89737158-79164280-da8c-11ea-8572-efdae8b0bb70.png)
+
+`Overview of MobileNetV2 Architecture. Blue blocks represent composite convolutional building blocks as shown above.`
+
+The intuition is that the bottlenecks encode the model’s intermediate inputs and outputs while the inner layer encapsulates the model’s ability to transform from lower-level concepts such as pixels to higher level descriptors such as image categories. Finally, as with traditional residual connections, shortcuts enable faster training and better accuracy.
+
+[Inverted Residuals](./CONTENT.md#inverted-residuals) enables faster training and better accuracy,[Linear Bottlenecks](./CONTENT.md#bottlenecks) encodes models intermediate inputs and outputs, Smaller Memory Footprint. Mobilenet V2 is Faster,Smaller and Uses [ReLU6](./CONTENT.md#relu6).`
+ 
+ 
+
 ShuffleNet V2
 
 Assignment
