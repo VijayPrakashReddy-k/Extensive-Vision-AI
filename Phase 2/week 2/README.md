@@ -181,6 +181,8 @@ The intuition is that the bottlenecks encode the model’s intermediate inputs a
 
 <li> ShuffleNet V2
 
+[paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/blob/master/Phase%202/week%202/Papers/ShuffleNet%20V2:%20Practical%20Guidelines%20for%20Efficient.pdf)
+
 ![shufflenetV1_V2](https://user-images.githubusercontent.com/42317258/89738552-35750600-da97-11ea-8e31-6696fa0bf11c.png)
 
 `Channels are split into 2 branches, one goes as identity, another with 1-3-1 route, and then they are concatenated (unlike ResNet). Total channels are kept the same before and after.`
