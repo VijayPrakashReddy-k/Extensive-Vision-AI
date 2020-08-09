@@ -175,8 +175,18 @@ For example, MobileNet V2 is must faster than NASNET, but they have comparable F
 
 The intuition is that the bottlenecks encode the model’s intermediate inputs and outputs while the inner layer encapsulates the model’s ability to transform from lower-level concepts such as pixels to higher level descriptors such as image categories. Finally, as with traditional residual connections, shortcuts enable faster training and better accuracy.
 
-[Inverted Residuals](./CONTENT.md#inverted-residuals) enables faster training and better accuracy,[Linear Bottlenecks](./CONTENT.md#bottlenecks) encodes models intermediate inputs and outputs, Smaller Memory Footprint. Mobilenet V2 is Faster,Smaller and Uses [ReLU6](./CONTENT.md#relu6).`
+[Inverted Residuals](./CONTENT.md#inverted-residuals) enables faster training and better accuracy,[Linear Bottlenecks](./CONTENT.md#bottlenecks) encodes models intermediate inputs and outputs, Smaller Memory Footprint. Mobilenet V2 is Faster,Smaller and Uses [ReLU6](./CONTENT.md#relu6).
  
-ShuffleNet V2
+![shufflenet V2](https://user-images.githubusercontent.com/42317258/89738507-c4355300-da96-11ea-8c95-5731fddff8ed.png)
 
-Assignment
+<li> ShuffleNet V2
+
+![shufflenetV1_V2](https://user-images.githubusercontent.com/42317258/89738552-35750600-da97-11ea-8e31-6696fa0bf11c.png)
+
+`Channels are split into 2 branches, one goes as identity, another with 1-3-1 route, and then they are concatenated (unlike ResNet). Total channels are kept the same before and after.`
+
+**What else did we change?**
+
+![changesV1_V2](https://user-images.githubusercontent.com/42317258/89738550-33ab4280-da97-11ea-9b02-d79375233d3c.png)
+
+<li>Assignment
