@@ -161,6 +161,8 @@ For example, MobileNet V2 is must faster than NASNET, but they have comparable F
 ![mobilenetV2](https://user-images.githubusercontent.com/42317258/89737772-6f430e00-da91-11ea-8b2d-af38c1156fe9.png)
 
 <li> MobileNet V2
+
+[paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/blob/master/Phase%202/week%202/Papers/MobileNetV2:%20Inverted%20Residuals%20and%20Linear%20Bottlenecks.pdf)
   
 `MobileNetV2 builds upon the ideas from MobileNetV1, using depthwise separable convolution as efficient building blocks. However, V2 introduces two new features to the architecture:`
 
@@ -175,8 +177,6 @@ The intuition is that the bottlenecks encode the model’s intermediate inputs a
 
 [Inverted Residuals](./CONTENT.md#inverted-residuals) enables faster training and better accuracy,[Linear Bottlenecks](./CONTENT.md#bottlenecks) encodes models intermediate inputs and outputs, Smaller Memory Footprint. Mobilenet V2 is Faster,Smaller and Uses [ReLU6](./CONTENT.md#relu6).`
  
- 
-
 ShuffleNet V2
 
 Assignment
