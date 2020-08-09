@@ -178,3 +178,38 @@ In 8 bit quantization, FP32 is replaced by INT8 during inference, while training
 - backward pass - float values
 
 [Reference](https://jackwish.net/2019/neural-network-quantization-introduction.html)
+
+## ShuffleNet:
+
+<section id="channel-shuffle">
+<h3>Channel Shuffle</h3>
+</section>
+
+Let's understand, by example:
+<ol>
+<li>Let Gr = 3,  and N = 4 (channels in each group) </li>
+    
+        1.RRRR GGGG BBBB
+        
+<li>Reshape to (Gr, N)
+    
+        1.RRRR
+        2.GGGG
+        3.BBBB
+    
+<li>Transpose to (N, Gr) </li>
+
+        1.RGB
+        2.RGB
+        3.RGB
+        4.RGB
+        
+<li>Flatten (not x, y, but channels, don't forget) </li>
+
+        1.RGB RGB RGB RGB
+        
+<li>Convert back to Gr = 3 and N = 4 </li>
+
+        1.RGBR GBRG BRGB
+
+![shuffling-channels](https://user-images.githubusercontent.com/42317258/89733923-76105780-da76-11ea-8dbb-c474715b57ff.png)
