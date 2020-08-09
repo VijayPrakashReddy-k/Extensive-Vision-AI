@@ -266,3 +266,5 @@ Let's understand, by example:
 - Though the ShuffleNet network is specially designed for small models (< 150 MFLOPs), it is still better than MobileNetV1 for higher computation cost, e.g. 3.1% more accurate than MobileNetV1 at the cost of 500 MFLOPs.<br>
 - The simple architecture design also makes it easy to equip ShuffeNets with the latest advances such as Squeeze-and-Excitation (SE) blocks.<br>
 - ShuffleNets with SE modules boosting the top-1 error of ShuffleNet 2× to 24.7%, but are usually 25 to 40% slower than the “raw” ShuffleNets on mobile devices, which implies that actual speedup evaluation is critical on low-cost architecture design.
+
+[reference](https://medium.com/syncedreview/shufflenet-an-extremely-efficient-convolutional-neural-network-for-mobile-devices-72c6f5b01651)
