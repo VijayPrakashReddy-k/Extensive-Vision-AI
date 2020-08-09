@@ -111,17 +111,16 @@ In the below figure, the group convolutions are given as examples to demonstrate
 
 *Figure 1(c) sets up the feature map from the previous group layer, which is then implemented by a channel shuffle operation. Channel shuffle operation is able to construct more powerful structures with multiple group convolutional layers.*
 
-**But there is a drawback, output from a certain channel is only derived from a small fraction of input channels. How do we fix this problem? **
+**But there is a drawback, output from a certain channel is only derived from a small fraction of input channels. How do we fix this problem?**
 
 If we allow group convolutions to obtain input data from different groups (b), the input and output channels will be fully related. Specifically, for the feature map generated from the previous group layer, we can first divide the channels in each group into several subgroups, then feed each group in the next layer with different groups. This can be efficiently and elegantly implemented by a channel shuffle operation. 
 
 - *`Suppose a convolutional layer with g groups whose output has g×n channels; we first reshape the output channel dimension into (g, n), transposing, and then flattening it back as the input of the next layer.`*
 
-[Visualize](./CONTENT.md#channel-shuffle)
+[Visualize Channel Shuffle](./CONTENT.md#channel-shuffle)
 
+[ShuffleNet Unit](./CONTENT.md#shufflenet-unit) is designed for small networks.
 
-- Channel Shuffle
-- ShuffleNet Unit
 - ShuffleNet Architecture
 
 Flops are not Reliable
