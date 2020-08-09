@@ -248,10 +248,21 @@ Let's understand, by example:
 - For some models (e.g. ShuffleNet 0.5×) when **group numbers become relatively large (e.g. g = 8), the classification score saturates or even drops. With an increase in group number (thus wider feature maps), input channels for each convolutional filter become fewer, which may harm representation capability.**
 
 
-<section id="comparision">
+<section id="comparison">
 <h2 align = 'center'>Channel Shuffle vs No shuffle</h2>
 </section>
 
 ![comparision](https://user-images.githubusercontent.com/42317258/89735162-364d6e00-da7e-11ea-8182-15f40a8b0e9c.png)
 
 - `Channel shuffle consistently boosts classification scores for different settings, which shows the importance of cross-group information interchange.`
+
+<section id="model-comparison">
+<h2 align = 'center'>ShuffleNet vs MobileNet</h2>
+</section>
+
+![model-comparison](https://user-images.githubusercontent.com/42317258/89735337-706b3f80-da7f-11ea-9df1-80dbe1585492.png)
+
+- ShuffleNet models are superior to MobileNetV1 for all the complexities.<br>
+- Though the ShuffleNet network is specially designed for small models (< 150 MFLOPs), it is still better than MobileNetV1 for higher computation cost, e.g. 3.1% more accurate than MobileNetV1 at the cost of 500 MFLOPs.<br>
+- The simple architecture design also makes it easy to equip ShuffeNets with the latest advances such as Squeeze-and-Excitation (SE) blocks.<br>
+- ShuffleNets with SE modules boosting the top-1 error of ShuffleNet 2× to 24.7%, but are usually 25 to 40% slower than the “raw” ShuffleNets on mobile devices, which implies that actual speedup evaluation is critical on low-cost architecture design.
