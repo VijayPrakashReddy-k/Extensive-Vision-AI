@@ -246,3 +246,12 @@ Let's understand, by example:
 - Smaller models tend to benefit more from groups.
 - For example, for ShuffleNet 1× the best entry (g = 8) is 1.2% better than the counterpart, while for ShuffleNet 0.5× and 0.25×, the gaps become 3.5% and 4.4% respectively.
 - For some models (e.g. ShuffleNet 0.5×) when **group numbers become relatively large (e.g. g = 8), the classification score saturates or even drops. With an increase in group number (thus wider feature maps), input channels for each convolutional filter become fewer, which may harm representation capability.**
+
+
+<section id="comparision">
+<h2 align = 'center'>Channel Shuffle vs No shuffle</h2>
+</section>
+
+![comparision](https://user-images.githubusercontent.com/42317258/89735162-364d6e00-da7e-11ea-8182-15f40a8b0e9c.png)
+
+- `Channel shuffle consistently boosts classification scores for different settings, which shows the importance of cross-group information interchange.`
