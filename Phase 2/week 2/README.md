@@ -15,6 +15,7 @@
   
   ![old trics](https://user-images.githubusercontent.com/42317258/87968141-94b9a900-cadd-11ea-87a1-13dbfe61fefa.png)
 
+![squeezenet](https://user-images.githubusercontent.com/42317258/89737791-913c9080-da91-11ea-8e63-ca0575780d3f.png)
   
 <li>SqueezeNet
   
@@ -34,7 +35,8 @@
       
 ![squeezenet_alexnet_compare](https://user-images.githubusercontent.com/42317258/88101047-12071b80-cbbb-11ea-9930-4b3aa076a3d8.png)
 
-  
+![mobilenetV1](https://user-images.githubusercontent.com/42317258/89737786-884bbf00-da91-11ea-8301-c7ebcb5f1dba.png)
+
 <li> MobileNetV1 <br>
 
 [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017307/MobileNets.Efficient.Convolutional.Neural.Networks.for.Mobile.Vision.pdf)
@@ -54,6 +56,8 @@
 ![depthwise_convs](https://user-images.githubusercontent.com/42317258/89256757-75289180-d642-11ea-8be3-116d696fe7d9.gif)
 
 [mobilenet v1 architecture](./CONTENT.md#mobilenet_v1)
+
+![quantization](https://user-images.githubusercontent.com/42317258/89737781-7c5ffd00-da91-11ea-9a1e-499049a5be18.png)
 
 <li>Quantization <br>
   
@@ -78,7 +82,9 @@
     The quantized MobileNetV1 of TensorFlow is only 4.8MB, such models can be easily deployed on any mobile platforms.
     
 [deep-dive-quantization](./CONTENT.md#quantization)
- 
+
+![shufflenetV1](https://user-images.githubusercontent.com/42317258/89737778-75d18580-da91-11ea-84dc-d3cedfa62e62.png)
+
 <li> ShuffleNet <br>
 
 [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017309/ShuffleNet.An.Extremely.Efficient.Convolutional.Neural.Network.for.Mobile.pdf)
@@ -127,6 +133,8 @@ If we allow group convolutions to obtain input data from different groups (b), t
 
 - [model comparison](./CONTENT.md#model-comparison) between ShuffleNet vs MobileNet on ImageNet classification
 
+![flops](https://user-images.githubusercontent.com/42317258/89737773-71a56800-da91-11ea-8df5-0986283b2031.png)
+
 <li>Flops are not Reliable <br>
   
 *`To measure the computation complexity, a widely used metric is the number of float-point operations or FLOPS. However, FLOPs are an indirect metric. It is an approximation of, but usually not equivalent to the direct metric that we rarely care about, such as the speed of latency. Such discrepancy has been noticed in many networks.`*
@@ -148,14 +156,16 @@ For example, MobileNet V2 is must faster than NASNET, but they have comparable F
 ***With these observations, we propose that two principles should be considered for effective network architecture design.*** <br>
 
 - First, the direct metric (e.g., speed) should be used instead of the indirect ones (e.g., FLOPs). <br>
-- Second, such metrics should be evaluated on the target platform. In this work, we follow the two principles and propose a more effective network architecture.
+- Second, such metrics should be evaluated on the target platform. In this work, we follow the two principles and propose a more effective network architecture.<br>
+
+![mobilenetV2](https://user-images.githubusercontent.com/42317258/89737772-6f430e00-da91-11ea-8b2d-af38c1156fe9.png)
 
 <li> MobileNet V2
   
 `MobileNetV2 builds upon the ideas from MobileNetV1, using depthwise separable convolution as efficient building blocks. However, V2 introduces two new features to the architecture:`
 
 - `1) linear bottlenecks between the layers, and` <br>
-- `2) shortcut connections between the bottlenecks
+- `2) shortcut connections between the bottlenecks`
 
 ![mobilenetv2-architecture](https://user-images.githubusercontent.com/42317258/89737158-79164280-da8c-11ea-8572-efdae8b0bb70.png)
 
