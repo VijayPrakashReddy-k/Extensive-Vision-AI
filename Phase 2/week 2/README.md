@@ -83,6 +83,43 @@
 
 [Paper](https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/files/5017309/ShuffleNet.An.Extremely.Efficient.Convolutional.Neural.Network.for.Mobile.pdf)
 
+`Megvii Inc (a.k.a Face++) introduces an extremely computation-efficient CNN architecture named ShuffleNet, which is designed especially for mobile devices with very limited computing power (e.g. 10-150 MFLOPs).` <br>
+
+Most focus on **pruning, compressing, or low-bit representation.** <br>
+
+The ShuffleNet utilizes **pointwise group convolution** *(Pointwise convolution actually is the 1×1 convolution to change the dimension)* and **channel shuffle** to reduce computation cost while maintaining accuracy.
+
+Experiments on *ImageNet classification* and *MS COCO object detection* demonstrate the superior performance of ShuffleNet over other structures, *e.g. lower top-1 error (absolute 7.8%) than MobileNet on ImageNet classification task, under 40MFLOPs. ShuffleNet is 13x faster than AlexNet while maintaining comparable accuracy.*
+
+Xception and ResNeXt architectures are awesome but become less efficient in extremely small networks because of the costly dense (1x1) convolutions. **They proposed using pointwise group convolutions to reduce the computation complexity of 1x1 convolutions.**
+
+- For each residual unit in ResNeXt, the pointwise convolutions occupy 93.4% multiplication-adds (cardinality 32). 
+
+***Problem : Expensive pointwise group convolutions result in limited number of channels to meet the complexity constraint, which might significantly damage accuracy.***
+ 
+***Solution :*** *`To overcome the side effects brought by group convolutions, they come up with a novel `* **channel shuffle operation** *`to help the information flowing across feature channels.`*
+ 
+- Hence, ShuffleNet allows more feature map channels, which helps to encode more information and is especially critical to the performance of very small networks. 
+
+In the below figure, the group convolutions are given as examples to demonstrate its capability in reducing computation cost.
+
+![channel-shuffle](https://user-images.githubusercontent.com/42317258/89733332-65f67900-da72-11ea-936b-9d8705fbdc98.png)
+
+*Figure 1(a) illustrates a situation of two stacked group convolution layers, which has twofold properties, blocking the information flow between channel groups and weakening representations.*
+
+*Figure 1(b) shows that the group convolution is allowed to obtain input data from different groups. Notice that the input channels are fully related to the output ones.*
+
+*Figure 1(c) sets up the feature map from the previous group layer, which is then implemented by a channel shuffle operation. Channel shuffle operation is able to construct more powerful structures with multiple group convolutional layers.*
+
+**But there is a drawback, output from a certain channel is only derived from a small fraction of input channels. How do we fix this problem? **
+
+If we allow group convolutions to obtain input data from different groups (b), the input and output channels will be fully related. Specifically, for the feature map generated from the previous group layer, we can first divide the channels in each group into several subgroups, then feed each group in the next layer with different groups. This can be efficiently and elegantly implemented by a channel shuffle operation. 
+
+- *`Suppose a convolutional layer with g groups whose output has g×n channels; we first reshape the output channel dimension into (g, n), transposing, and then flattening it back as the input of the next layer.`*
+
+[Visualize](./CONTENT.md#channel-shuffle)
+
+
 - Channel Shuffle
 - ShuffleNet Unit
 - ShuffleNet Architecture
