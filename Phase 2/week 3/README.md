@@ -9,6 +9,8 @@
  
 <li>Detection Pipeline
 
-![Facial-detection-pipeline](https://user-images.githubusercontent.com/42317258/89800974-1e90eb00-db4d-11ea-9320-26f6f3ca55c0.png)
+![Facial-detection-pipeline](https://user-images.githubusercontent.com/42317258/89808415-b98ec280-db57-11ea-8c92-8043c22329af.jpg)
+
+**`Transform :`** is to straightening the tilted image
 
 [use cases](./CONTENT.md#usecases)
