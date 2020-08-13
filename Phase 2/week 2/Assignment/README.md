@@ -1,5 +1,9 @@
 ### Mobinet V2 Training and Deployment for Custom Dataset on AWS with Serverless open source framework:
 
+Lambda URL after deployment : `https://ly1yaeusha.execute-api.ap-south-1.amazonaws.com/dev/mobilenetV2-classify-flying-objects`
+
+![S2_result](https://user-images.githubusercontent.com/42317258/90090921-d9360e80-dd42-11ea-8d60-383ab771ad4b.png)
+
 #### Data Collection:
 - 21,824 images have been collected via group effort over four classes:
 
