@@ -1,0 +1,60 @@
+service: mobilenet-flying-objects
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: ap-south-1
+  timeout: 60
+  environment:
+    S3_BUCKET: eva-s2
+    MODEL_PATH: mobilenet_customdata.pt
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - s3:getObject
+      Resource: arn:aws:s3:::eva-s2/*
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    zip: true
+    slim: true
+    strip: false
+    noDeploy:
+      - docutils
+      - jmespath
+      - pip
+      - python-dateutil
+      - setuptools
+      - six
+      - tensorboard
+    useStaticCache: true
+    useDownloadCache: true
+    cacheLocation: "./cache"
+
+package:
+  individually: false
+  exclude:
+    - package.json
+    - package-log.json
+    - node_modules/**
+    - cache/**
+    - test/**
+    - __pycache__/**
+    - .pytest_cache/**
+    - model/**
+
+functions:
+  classify_image:
+    handler: handler.classify_flying_objects
+    memorySize: 3008
+    timeout: 60
+    events:
+      - http:
+          path: mobilenetV2-classify-flying-objects
+          method: post
+          cors: true
+
+plugins:
+  - serverless-python-requirements
