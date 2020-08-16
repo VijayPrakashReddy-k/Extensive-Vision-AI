@@ -39,6 +39,10 @@
             object detection
             feature extraction
             filtering
+ 
+ ![facial-landmark-detection](https://user-images.githubusercontent.com/42317258/90092380-6c247800-dd46-11ea-9572-5f004805c397.png)
+
+- Here, will go step by step over the code for facial landmark detection on an image and save the results to disk.
             
  ![dlib-68points](https://user-images.githubusercontent.com/42317258/90091906-30d57980-dd45-11ea-908b-dc766557cbf4.png)
  
@@ -50,6 +54,3 @@ The image below shows all the landmarks and their corresponding indices in Dlibâ
 
 <li> Facial landmark detection,one of the Facial Detection Pipeline usecase with Dlib
  
-![facial-landmark-detection](https://user-images.githubusercontent.com/42317258/90092380-6c247800-dd46-11ea-9572-5f004805c397.png)
-
-- Here, will go step by step over the code for facial landmark detection on an image and save the results to disk.
