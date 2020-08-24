@@ -4,11 +4,11 @@
 
 **week 5 contents:**
 
-- [Human Pose Estimation](./README.md/HPE)
+- [Human Pose Estimation](./README.md/#HPE)
 
-- [Key problems in Pose estimation](./README.md/problems)
+- [Key problems in Pose estimation](./README.md/#problems)
 
-- [HPE Method Categories](./README.md/methods)
+- [HPE Method Categories](./README.md/#methods)
 
             1. Generative vs Discriminative
             
@@ -18,9 +18,9 @@
             
             4. One-stage vs Multi-stage
             
-- [Human Pose Models](./README.md/models)
-- [HPE Benchmarks and Datasets](./README.md/datasets)
-- [HPE Evaluation Metrics](./README.md/metrics)
+- [Human Pose Models](./README.md/#models)
+- [HPE Benchmarks and Datasets](./README.md/#datasets)
+- [HPE Evaluation Metrics](./README.md/#metrics)
 - Most important models:
 
             1. OpenPose
@@ -31,7 +31,7 @@
             
             4. Simple baseline for  HPE and tracking
             
-- [Open Neural network Exchnage (ONNX)](./README.md/onnx)
+- [Open Neural network Exchnage (ONNX)](./README.md/#onnx)
 
 [Awesome HPE Reference](https://github.com/wangzheallen/awesome-human-pose-estimation)
 
