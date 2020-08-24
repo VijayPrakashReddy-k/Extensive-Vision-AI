@@ -1,4 +1,11 @@
-## 5. Human Pose Estimation, State of Art HPE and Human Localization
+<h1><span> 5. Human Pose Estimation, State of Art HPE and Human Localization </span></h1>
+
+h1 {
+    text-align: center; 
+}
+h1 span { 
+    background-color: green; 
+}
 
 ### Session 5 - Monocular Human Pose Estimation And ONNX Models
 
@@ -16,33 +23,4 @@
             
             2.Top-down vs Bottom-up
             
-            3.Regression vs Detection
-            
-            4.One-stage vs Multi-stage
-            
-<li>Human Pose Models
-<li>HPE Benchmarks and Datasets
-<li>HPE Evaluation Metrics
-<li>Most important models:
-
-            1.OpenPose
-            
-            2.A simple yet effective baseline
-            
-            3.DensePose
-            
-            4.Simple baseline for  HPE and tracking
-            
-<li>Open Neural Network Exchange (ONNX)
-<li>Assignment <br>
-
-[Awesome HPE Reference](https://github.com/wangzheallen/awesome-human-pose-estimation)
-
-<h2>Human Pose Estimation</h2>
-
-h2{
-    display:inline;
-    background-color:green;
-    color:#fff;
-}
-
+            3.Regression vs Detect
