@@ -5,7 +5,9 @@
 ### 1. Landmark Detection:
 - `There are two kinds of facial landmark detectors, that are provided by the Dlib are - new, faster, smaller 5-point facial landmark detector and the original 68-point facial landmark detector.`<br>
 
-![5-68 points](https://user-images.githubusercontent.com/42317258/89811653-987ca080-db5c-11ea-818b-cbb51a4fa01f.png)
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/42317258/89811653-987ca080-db5c-11ea-818b-cbb51a4fa01f.png" />
+</p>
 
 - `The 68-point detector localizes regions along the eyes, eyebrows, nose, mouth, and jawline, the 5-point facial landmark detector reduces this information to: 2 points for the left eye, 2 points for the right eye and 1 point for the nose`
 
