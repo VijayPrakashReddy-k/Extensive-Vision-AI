@@ -33,4 +33,8 @@
             
 - [Open Neural network Exchnage (ONNX)](./README.md/onnx)
 
-Awesome HPE Reference
+[Awesome HPE Reference](https://github.com/wangzheallen/awesome-human-pose-estimation)
+
+<section id="HPE">
+<h2>Huamn Pose Estimation</h2>
+</section>
