@@ -35,9 +35,7 @@
 
 [Awesome HPE Reference](https://github.com/wangzheallen/awesome-human-pose-estimation)
 
-<section id="HPE">
-<h1 align = 'center'>Human Pose Estimation</h1>
-</section>
+<h1 align = 'center',id = "HPE">Human Pose Estimation</h1>
 
 - `Human pose estimation is the process of estimating the configuration of the body (pose) from a single, typically monocular, image.`
 - `It represents the orientation of a person in a graphical format. Essentially, it is a set of coordinates that can be connected to describe the pose of the person. Each co-ordinate in the skeleton is known as a` ***part (or a joint, or a keypoint).*** `A valid connection between two parts is known as` ***a pair (or a limb).***
