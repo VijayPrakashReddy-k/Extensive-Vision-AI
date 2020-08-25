@@ -4,7 +4,7 @@
 
 **week 5 contents:**
 
-[Human Pose Estimation](./README.md/#HPE)
+- [Human Pose Estimation](./README.md/#HPE)
 
 - [Key problems in Pose estimation](./README.md/#problems)
 
@@ -36,10 +36,25 @@
 [Awesome HPE Reference](https://github.com/wangzheallen/awesome-human-pose-estimation)
 
 <section id="HPE">
-<h2>Huamn Pose Estimation</h2>
+<h1 align = 'center'>Human Pose Estimation</h1>
 </section>
 
-<p align = 'center', id = "onnx">
+- `Human pose estimation is the process of estimating the configuration of the body (pose) from a single, typically monocular, image.`
+- `It represents the orientation of a person in a graphical format. Essentially, it is a set of coordinates that can be connected to describe the pose of the person. Each co-ordinate in the skeleton is known as a` ***part (or a joint, or a keypoint).*** `A valid connection between two parts is known as` ***a pair (or a limb).***
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/91109601-1c747380-e699-11ea-98ea-f27226353d01.gif" />
+</p>
+
+[Applications](./CONTENT.md/#applications)
+
+
+
+
+
+
+
+<p id="onnx">
             <img src = "https://user-images.githubusercontent.com/42317258/91028889-b8f83080-e61b-11ea-983b-825f88b0a10e.png" />
 </p>
 
