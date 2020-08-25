@@ -46,7 +46,9 @@
 
 [Applications](./CONTENT.md/#applications)
 
-![key-problems](https://user-images.githubusercontent.com/42317258/91117076-69614580-e6ab-11ea-878a-7ec31433b1bd.png)
+<p id = 'problems'>
+            <img src = "https://user-images.githubusercontent.com/42317258/91117076-69614580-e6ab-11ea-878a-7ec31433b1bd.png" />
+</p>
 
 - `Human pose estimation is one of the key problems in computer vision that has been studied for well over 15 years. The reason for its importance is the abundance of applications that can benefit from such technology.`
 
@@ -56,7 +58,9 @@
 
 Despite many years of research, however, pose estimation remains a very difficult and still largely unsolved problem.[Here, are the most significant challenges](./CONTENT.md/#C)
 
-![HPE categories](https://user-images.githubusercontent.com/42317258/91124284-979b5100-e6bc-11ea-8d73-4b0500bd731d.png)
+<p id = 'methods'>
+            <img src = "https://user-images.githubusercontent.com/42317258/91124284-979b5100-e6bc-11ea-8d73-4b0500bd731d.png" />
+</p>
 
 - **i. Generative and Discriminative (3D Single Person)**
 
