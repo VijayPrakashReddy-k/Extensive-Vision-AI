@@ -58,25 +58,25 @@ Despite many years of research, however, pose estimation remains a very difficul
 
 ![HPE categories](https://user-images.githubusercontent.com/42317258/91124284-979b5100-e6bc-11ea-8d73-4b0500bd731d.png)
 
-- 1. Generative and Discriminative (3D Single Person)
+- **i. Generative and Discriminative (3D Single Person)**
 
             Generative - human body model-based
             
             Discriminative - human body model-free
             
-- 2. Top-down and Bottom-up (Multi-Person)
+- **ii. Top-down and Bottom-up (Multi-Person)**
 
             Top-down - from high-level abstraction to low-level pixel evidence
 
             Bottom-up - from low-level pixel evidence to high-level abstraction
 
-- 3. Regression and Detection based (Single Person)
+- **iii. Regression and Detection based (Single Person)**
 
             Regression - directly mapping from input images to body joint points
 
             Detection - generating intermediate image patches or heatmaps of join-locations
 
-- 4. One-stage and Multi-stage:
+- **iv. One-stage and Multi-stage:**
 
             One-stage : end-to-end training
 
