@@ -34,3 +34,25 @@ HPE Applications
 </p>
 
 - **Video Surveillance, Medical assistance, Self-driving, Sports motion analysis, etc.**
+
+![key-problems](https://user-images.githubusercontent.com/42317258/91117076-69614580-e6ab-11ea-878a-7ec31433b1bd.png)
+
+**Among the most significant challenges are:**
+
+      (1) variability of human visual appearance in images,
+
+      (2) variability in lighting conditions,
+
+      (3) variability in the human physique,
+
+      (4) partial occlusions due to self-articulation and layering of objects in the scene,
+
+      (5) the complexity of human skeletal structure,
+
+      (6) the high dimensionality of the pose, and
+
+      (7) the loss of 3d information that results from observing the pose from 2d planar image projections
+      
+<p align = 'center'>
+      <img src = https://user-images.githubusercontent.com/42317258/91123587-de884700-e6ba-11ea-8646-db8281708fc9.jpg />
+</p>
