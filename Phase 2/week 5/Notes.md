@@ -1,5 +1,13 @@
 ## References:
 
+### HPE
+
+https://theaisummer.com/Human-Pose-Estimation/
+
+### Pose Detection in the Browser:
+
+https://github.com/tensorflow/tfjs-models/tree/master/posenet
+
 ### ONNX
 
 https://thenewstack.io/tutorial-accelerate-ai-at-edge-with-onnx-runtime-and-intel-neural-compute-stick-2/
