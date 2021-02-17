@@ -21,7 +21,7 @@
 - [Human Pose Models](./README.md/#models)
 - [HPE Benchmarks and Datasets](./README.md/#datasets)
 - [HPE Evaluation Metrics](./README.md/#metrics)
-- Most important models:
+- [Most important models](./README.md/#work):
 
             1. OpenPose
             
@@ -56,7 +56,7 @@
 
 - Motion capture implies *recording the movement of head and body but no facial or finger data*, whereas Performance Capture includes hands, fingers and face.MoCap technology is useful for applications ranging from character animation to clinical analysis of gait pathologies.
 
-Despite many years of research, however, pose estimation remains a very difficult and still largely unsolved problem.[Here, are the most significant challenges](./CONTENT.md/#C)
+Despite many years of research, however, pose estimation remains a very difficult and still largely unsolved problem.[Here, are the most significant challenges](./CONTENT.md/#challenges)
 
 <p id = 'methods'>
             <img src = "https://user-images.githubusercontent.com/42317258/91124284-979b5100-e6bc-11ea-8d73-4b0500bd731d.png" />
@@ -151,6 +151,18 @@ Despite many years of research, however, pose estimation remains a very difficul
             PCK = Percentage of Correct Keypoint
 
             PCKh = The PCKh performance metric is the percentage of joints with predicted locations that are no further than half of the head segment length from the ground truth.
+            
+<p id="work", align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108200411-733ca080-7144-11eb-81d4-dd19206cda10.png" />
+</p>      
+
+[1.OpenPose](./CONTENT.md/#openpose)
+
+[2.A simple yet effective baseline](./CONTENT.md/#baseline)
+
+[3.DensePose](./CONTENT.md/#densepose)
+
+[4.Simple baseline for HPE and Tracking](./CONTENT.md/#baseline-tracking)
 
 <p id="onnx">
             <img src = "https://user-images.githubusercontent.com/42317258/91028889-b8f83080-e61b-11ea-983b-825f88b0a10e.png" />
