@@ -138,6 +138,20 @@ Despite many years of research, however, pose estimation remains a very difficul
             <img src = "https://user-images.githubusercontent.com/42317258/108175495-d9b2c600-7126-11eb-9fdd-cd527483e966.jpg" />
 </p>
 
+<p id="metrics", align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108187028-0f11e080-7134-11eb-9857-e2ae77bb035a.png" />
+</p>
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108187057-15a05800-7134-11eb-9810-4e0640914166.png" />
+</p>
+
+            OKS = Object Keypoint Similarity
+
+            PCK = Percentage of Correct Keypoint
+
+            PCKh = The PCKh performance metric is the percentage of joints with predicted locations that are no further than half of the head segment length from the ground truth.
+
 <p id="onnx">
             <img src = "https://user-images.githubusercontent.com/42317258/91028889-b8f83080-e61b-11ea-983b-825f88b0a10e.png" />
 </p>
