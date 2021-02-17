@@ -52,7 +52,7 @@
 
 - `Human pose estimation is one of the key problems in computer vision that has been studied for well over 15 years. The reason for its importance is the abundance of applications that can benefit from such technology.`
 
-- For example, human pose estimation allows for higher-level reasoning in the context of human-computer interaction and activity recognition; it is also one of the basic building blocks for *`marker-less motion capture (MoCap) technology`.*
+- For example, human pose estimation allows for higher-level reasoning in the context of human-computer interaction and activity recognition; it is also one of the basic building blocks for **marker-less motion capture (MoCap) technology.**
 
 - Motion capture implies *recording the movement of head and body but no facial or finger data*, whereas Performance Capture includes hands, fingers and face.MoCap technology is useful for applications ranging from character animation to clinical analysis of gait pathologies.
 
@@ -62,7 +62,7 @@ Despite many years of research, however, pose estimation remains a very difficul
             <img src = "https://user-images.githubusercontent.com/42317258/91124284-979b5100-e6bc-11ea-8d73-4b0500bd731d.png" />
 </p>
 
-- **i. Generative and Discriminative (3D Single Person)**
+## i. Generative and Discriminative (3D Single Person)
 
             Generative - human body model-based
             
@@ -74,7 +74,7 @@ Despite many years of research, however, pose estimation remains a very difficul
 
 - **Discriminative methods directly learn a mapping from input sources to human pose space (learning-based) or search in existing examples (example-based) without using human body models. Discriminative methods are usually faster than generative methods but may have less robustness for poses never trained with.**
             
-- **ii. Top-down and Bottom-up (Multi-Person)**
+## ii. Top-down and Bottom-up (Multi-Person)
 
             Top-down - from high-level abstraction to low-level pixel evidence
 
@@ -84,7 +84,7 @@ Despite many years of research, however, pose estimation remains a very difficul
 
 - **In contrast, bottom-up methods first predict all body parts of every person in the input image and then group them either by human body model fitting or other algorithms. Note that body parts could be joints, limbs, or small template patches depending on different methods. With an increased number of people in an image, the computation cost of top-down methods significantly increases, while keeps stable for bottom-up methods. However, if there are some people with a large overlap, bottom-up methods face challenges to group corresponding body parts.**
 
-- **iii. Regression and Detection based (Single Person)**
+## iii. Regression and Detection based (Single Person)
 
             Regression - directly mapping from input images to body joint points
 
@@ -94,7 +94,7 @@ Despite many years of research, however, pose estimation remains a very difficul
 
 - **Direct mapping from images to joint coordinates is very difficult since it is a highly nonlinear problem, while small-region representation provides dense pixel information with stronger robustness.  Compared to the original image size, the detected results of small-region representation limit the accuracy of the final joint coordinates.**
 
-- **iv. One-stage and Multi-stage:**
+## iv. One-stage and Multi-stage:
 
             One-stage : end-to-end training
 
@@ -103,6 +103,34 @@ Despite many years of research, however, pose estimation remains a very difficul
 - **The deep learning-based one-stage methods aim to map the input image to human poses by employing end-to-end networks, while multi-stage methods usually predict human pose in multiple stages and are accompanied by intermediate supervision. For example, some multiperson pose estimation methods first detect the locations of people and then estimate the human pose for each detected person.**
 
 - **Other 3D human pose estimation methods first predict joint locations in the 2D surface, then extend them to 3D space. The training of one-stage methods is easier than multi-stage methods, but with less intermediate constraints.**
+
+<p id="models", align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108172879-63f92b00-7123-11eb-9a52-2839fc054308.png" />
+</p>
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108173153-c81bef00-7123-11eb-8146-75bba259817d.jpg" />
+</p>
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108175040-411c4600-7126-11eb-88cc-cfede995f5b5.png" />
+</p>
+
+<p id="datasets", align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108174176-20072580-7125-11eb-8820-c743d84084a3.png" />
+</p>
+
+<h2 align = 'center'>Summary of 2D Single person HPE</h2>
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108174496-84c28000-7125-11eb-8ca3-83115dcb05ca.png" />          
+</p>
+
+<h2 align = 'center'>Summary of 2D Multi person HPE</h2>
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/108174490-83915300-7125-11eb-8913-6ce02748fcb8.png" />
+</p>
 
 <p id="onnx">
             <img src = "https://user-images.githubusercontent.com/42317258/91028889-b8f83080-e61b-11ea-983b-825f88b0a10e.png" />
