@@ -35,7 +35,9 @@ HPE Applications
 
 - **Video Surveillance, Medical assistance, Self-driving, Sports motion analysis, etc.**
 
-![key-problems](https://user-images.githubusercontent.com/42317258/91117076-69614580-e6ab-11ea-878a-7ec31433b1bd.png)
+<p align = 'center' id = 'challenges'>
+      <img src = https://user-images.githubusercontent.com/42317258/91117076-69614580-e6ab-11ea-878a-7ec31433b1bd.png />
+</p>
 
 **Among the most significant challenges are:**
 
@@ -56,3 +58,22 @@ HPE Applications
 <p align = 'center'>
       <img src = https://user-images.githubusercontent.com/42317258/91123587-de884700-e6ba-11ea-8646-db8281708fc9.jpg />
 </p>
+
+<p align = 'center' id = 'openpose'>
+      <img src = https://user-images.githubusercontent.com/42317258/108200411-733ca080-7144-11eb-81d4-dd19206cda10.png />
+</p>
+
+![openpose](https://user-images.githubusercontent.com/42317258/108203452-89e4f680-7148-11eb-9435-c6366b6a198f.png)
+
+- `OpenPose is the most popular open-source tool for body, foot, hand, and facial keypoint detection. It makes use of Part Affinity Fields (PAFs), a set of 2D vector fields to encode the location and orientation of limbs over the image domain.`
+
+<p align = 'center'>
+      <img src = https://user-images.githubusercontent.com/42317258/108203898-1b546880-7149-11eb-899d-b28ab8e0f4d0.png />
+</p>
+
+As shown in the image F is passed through several convolutional layers to generate the PAFs (L) and confidence maps S for every joint location. The process is repeated for some iterations and the network refines its predictions at every stage. OpenPose is widely used in research projects. 
+
+<p align = 'center'>
+      <img src = https://user-images.githubusercontent.com/42317258/108204104-5fe00400-7149-11eb-8cc1-83493ab23992.png />
+</p>
+
