@@ -77,4 +77,4 @@ As shown in the image F is passed through several convolutional layers to genera
       <img src = https://user-images.githubusercontent.com/42317258/108204104-5fe00400-7149-11eb-8cc1-83493ab23992.png />
 </p>
 
-![download-openpose-paper.pdf]("https://github.com/VijayPrakashReddy-k/Extensive-Vision-AI/blob/master/Phase%202/week%205/papers/OpenPose.pdf")
+![openpose-paper.pdf](".papers/OpenPose.pdf")
