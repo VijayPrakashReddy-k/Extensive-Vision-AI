@@ -185,3 +185,27 @@ Despite many years of research, however, pose estimation remains a very difficul
 - `ONNX Runtime is a performance-focused engine for ONNX models,which inferences efficiently across multiple platforms and hardware (Windows, Linux, and Mac and on both CPUs and GPUs).ONNX Runtime has proved to considerably increase performance over multiple models.`
 
 ![onnx-runtime](https://user-images.githubusercontent.com/42317258/91034458-a7665700-e622-11ea-90f8-dc104df2d208.jpg)
+
+![deploy](https://user-images.githubusercontent.com/42317258/108237733-34bbdb80-716e-11eb-9ad7-6feea26d61bf.png)
+
+![frameworks-1](https://user-images.githubusercontent.com/42317258/108237762-38e7f900-716e-11eb-963c-2ee7d691879c.png)
+
+### Practice ONNX:
+
+- [PyTorch YoloV4 ONNX](https://github.com/Tianxiaomo/pytorch-YOLOv4)
+
+- [AlexNet to ONNX](https://michhar.github.io/convert-pytorch-onnx/)
+
+- [ResNet to ONNX](https://colab.research.google.com/github/bentoml/gallery/blob/master/onnx/resnet50/resnet50.ipynb)
+
+- [SuperResolution to ONNX](https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html)
+
+[ONNX.js](https://microsoft.github.io/onnxjs-demo/#/)
+
+![HPE-assignment](https://user-images.githubusercontent.com/42317258/108237213-aa737780-716d-11eb-8eaf-555bc1979335.png)
+
+[Simple Baseline for HPE and tracking](https://arxiv.org/pdf/1804.06208.pdf)
+
+[paper](https://github.com/Microsoft/human-pose-estimation.pytorch)
+
+[models](https://onedrive.live.com/?authkey=%21AFkTgCsr3CT9%2D%5FA&id=56B9F9C97F261712%2110709&cid=56B9F9C97F261712)
