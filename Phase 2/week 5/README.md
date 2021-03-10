@@ -80,6 +80,8 @@ Despite many years of research, however, pose estimation remains a very difficul
 
             Bottom-up - from low-level pixel evidence to high-level abstraction
             
+`The bottom-up approach first finds the keypoints and then maps them to different people in the image, while the top-down approach first uses a mechanism to detect people in an image, put a bounding box area around each person instance and then estimate keypoint configurations within the bounding boxes.`
+            
 - **For multi-person pose estimation, HPE methods can generally be classified as top-down and bottom-up methods according to the starting point of the prediction: high-level abstraction or low-level pixel evidence. Topdown methods start from high-level abstraction to first detect persons and generate the person locations in bounding boxes. Then pose estimation is conducted for each person.**
 
 - **In contrast, bottom-up methods first predict all body parts of every person in the input image and then group them either by human body model fitting or other algorithms. Note that body parts could be joints, limbs, or small template patches depending on different methods. With an increased number of people in an image, the computation cost of top-down methods significantly increases, while keeps stable for bottom-up methods. However, if there are some people with a large overlap, bottom-up methods face challenges to group corresponding body parts.**
