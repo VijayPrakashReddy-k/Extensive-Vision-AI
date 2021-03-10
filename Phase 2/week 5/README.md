@@ -140,6 +140,32 @@ Despite many years of research, however, pose estimation remains a very difficul
             <img src = "https://user-images.githubusercontent.com/42317258/108175495-d9b2c600-7126-11eb-9fdd-cd527483e966.jpg" />
 </p>
 
+### [MPII Human Pose Dataset](http://human-pose.mpi-inf.mpg.de/#download)
+
+   `MPII Human Pose dataset is a state of the art benchmark for evaluation of articulated human pose estimation. The dataset includes around 25K images containing over 40K people with annotated body joints. The images were systematically collected using an established taxonomy of every day human activities. Overall the dataset covers 410 human activities and each image is provided with an activity label. Each image was extracted from a YouTube video and provided with preceding and following un-annotated frames. In addition, for the test set we obtained richer annotations including body part occlusions and 3D torso and head orientations.`
+       
+### [COCO (Common Objects in Context) Dataset](https://cocodataset.org/#home)
+
+`COCO is a large-scale object detection, segmentation, and captioning dataset. COCO has several features:`
+
+- Object segmentation
+
+- Recognition in context
+
+- Superpixel stuff segmentation
+
+- 330K images (>200K labeled)
+
+- 1.5 million object instances
+
+- 80 object categories
+
+- 91 stuff categories
+
+- 5 captions per image
+
+- 250,000 people with keypoints
+
 <p id="metrics", align = 'center'>
             <img src = "https://user-images.githubusercontent.com/42317258/108187028-0f11e080-7134-11eb-9857-e2ae77bb035a.png" />
 </p>
@@ -153,6 +179,8 @@ Despite many years of research, however, pose estimation remains a very difficul
             PCK = Percentage of Correct Keypoint
 
             PCKh = The PCKh performance metric is the percentage of joints with predicted locations that are no further than half of the head segment length from the ground truth.
+            
+[Metric-reference](https://cocodataset.org/#keypoints-eval)
             
 <p id="work", align = 'center'>
             <img src = "https://user-images.githubusercontent.com/42317258/108200411-733ca080-7144-11eb-81d4-dd19206cda10.png" />
