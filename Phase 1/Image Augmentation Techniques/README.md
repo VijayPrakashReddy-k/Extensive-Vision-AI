@@ -3,9 +3,9 @@
 
 **week 9 contents:**
 
-- [Relationship between Data and Validation Accuracy](./README.md/#data-relation)
+- [Relationship between Data and Validation Accuracy](./README.md/#datarelation)
 
-- [Data Augmentation](./README.md/#data-aug)
+- [Data Augmentation](./README.md/#dataaug)
 
 - [Data Augmentation Strategies](./README.md/#strategies)
 
@@ -47,7 +47,7 @@
 
 - [Assignment](./README.md/#assignment)
 
-<p align = 'center',id = 'data-relation'>
+<p align = 'center',id = 'datarelation'>
             <img src = "https://user-images.githubusercontent.com/42317258/110660713-d4a6db00-81e9-11eb-9047-4d65fd26042f.png" />
 </p>
 
@@ -69,7 +69,7 @@
 
 - `As we can see above graph, it is exponential (As data getting increased, the average precision also getting increased exponentially).`
 
-<p align = 'center',id = 'data-aug'>
+<p align = 'center',id = 'dataaug'>
             <img src = "https://user-images.githubusercontent.com/42317258/110662930-fd2fd480-81eb-11eb-8c91-f3f686741d89.png" />
 </p>
 
@@ -77,7 +77,7 @@
 
 - Designing appropriate DA policies requires a lot of expert experience and is time-consuming, and the evaluation of searching the optimal policies is costly. Moreover, the policies generated using DA policies are usually not reusable.
 
-- [Source](./Papers/Revisiting Unreasonable Effectiveness of Data in Deep Learning Era.pdf) : we find that the performance on vision tasks increases logarithmically based on the volume of training data size
+[Source](Papers/Revisiting-Unreasonable-Effectiveness-of-Data-in-Deep-Learning-Era.pdf) : we find that the performance on vision tasks increases logarithmically based on the volume of training data size.
 
 - Generally, the more data, the better deep neural networks can do. Insufficient data can lead to model over-fitting, which will reduce the generalization performance of the model on the test set. And Techniques such as:
 
@@ -90,3 +90,11 @@
     - Layer normalization 
     
 have been proposed to help combat over-fitting, but they will fall short if data is limited.
+
+- *So,we have Data Augmentation Strategies to Increase the size of the data are:*
+
+      PMDA - Poor Man's Data Augmentation Strategies
+
+      MMDA* - Middle-Class Man's Data Augmentation Strategies
+
+      RMDA* - Rich Man's Data Augmentation Strategies
