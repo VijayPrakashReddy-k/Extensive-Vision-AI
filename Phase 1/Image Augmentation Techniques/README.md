@@ -176,3 +176,15 @@ Affine distortions greatly improved results on the MNIST database. However,best 
 ![cutout-results](https://user-images.githubusercontent.com/42317258/110754095-6a377e80-826d-11eb-894b-6fcc1a383cb3.png)
 
 [CUTOUT - 29 Nov 2017](Papers/MMDA/CUTOUT/Cutout.pdf)
+
+<p align = 'center',id = 'mixup'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110755970-97852c00-826f-11eb-980b-ca0983f86dd4.png" />
+</p>
+
+`Mixup alpha-blends two images to construct a new training image. Mixup can train deep CNNs on convex combinations of pairs of training samples and their labels and enables deep CNNs to favor a simple linear behavior in between training samples. This behavior makes the prediction confidence transit linearly from one class to another class, thus providing smoother estimation and margin maximization. Alpha-blending not only increases the variety of training images but also works like adversarial perturbation. Thereby, mixup makes deep CNNs robust to adversarial examples and stabilizes the training of generative adversarial networks. In addition, it behaves similarly to class label smoothing by mixing class labels with the ratio λ : 1 − λ.`
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110755994-9fdd6700-826f-11eb-929f-56348da22d3e.png" />
+</p>
+
+[MIXUP - 27 April 2018](Papers/MMDA/MIXUP_2018_27_04/mixup-BEYOND-EMPIRICAL-RISK-MINIMIZATION.pdf)
