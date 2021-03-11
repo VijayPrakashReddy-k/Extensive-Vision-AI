@@ -12,8 +12,11 @@
 
 [Albumentations_examples](https://github.com/albumentations-team/albumentations_examples)
 
+[Data Augmentation](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0197-0/figures/2)
+
 [Examples](https://sourcecodequery.com/example-method/albumentations.GridDistortion)
 
+[Albumentation docmentation](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Cutout)
 
 #### Grad-CAM:
 
