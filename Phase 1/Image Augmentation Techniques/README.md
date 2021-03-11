@@ -107,7 +107,9 @@ have been proposed to help combat over-fitting, but they will fall short if data
 
 Simple Stuff which most probably is in-built in Pytorch. 
 
-![pmda](https://user-images.githubusercontent.com/42317258/110740248-c348e780-8258-11eb-96a8-281b68a286aa.jpg)
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110740248-c348e780-8258-11eb-96a8-281b68a286aa.jpg" />
+</p>
 
 <p align = 'center',id = 'mmda'>
             <img src = "https://user-images.githubusercontent.com/42317258/110740754-947f4100-8259-11eb-9c6e-39d331d33978.png" />
@@ -115,7 +117,9 @@ Simple Stuff which most probably is in-built in Pytorch.
 
 - `ALBUMENTATIONS is easy to integrate with PyTorch.`
 
-![Albumentations](https://user-images.githubusercontent.com/42317258/110740913-d01a0b00-8259-11eb-98ea-22d043cdfaa6.png)
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110740913-d01a0b00-8259-11eb-98ea-22d043cdfaa6.png" />
+</p>
 
 - `It has some nearly everything we'd want:`
 
@@ -124,3 +128,21 @@ Simple Stuff which most probably is in-built in Pytorch.
 - `And smart way of handling Annotations`
 
 ![albumentation-annotations](https://user-images.githubusercontent.com/42317258/110740929-d4debf00-8259-11eb-9e53-f8908ad1f163.jpeg)
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110744715-25591b00-8260-11eb-90f7-bac23bea04ce.png" />
+</p>
+
+- `Distortion related methods:`
+
+          albumentations.GridDistortion
+          
+          albumentations.ElasticTransform
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110745349-1aeb5100-8261-11eb-825b-92afe9141c74.png" />
+</p>
+
+Affine distortions greatly improved results on the MNIST database. However,best results were obtained when we used elastic deformations. The imagedeformations were created by first generating randomdisplacement fields, that is ∆x(x,y) = rand(-1,+1) and ∆x(x,y)=rand(-1,+1), where rand(-1,+1) is a random number between -1 and +1, generated with a uniform distribution. The fields ∆x and ∆y are then convolved with a Gaussian of standard deviation σ (in pixels). If σ is large, the resulting values are very small because the random values average 0. If we normalize the displacement field (to a norm of 1), the field is then close to constant, with a random direction. If σ is small, the field looks like a completely random field after normalization (as depicted in Figure 2, top right). For intermediate σ values, the displacement fields look like elastic deformation, where σ is the elasticity coefficient.The displacement fields are then multiplied by a scaling factor α that controls the intensity of the deformation.
+
+[ELASTIC DISTORTION - 2003](Papers/MMDA/ELASTIC_DISTORTION_2003/Elastic_Distortion.pdf)
