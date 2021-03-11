@@ -178,3 +178,23 @@ Simple Stuff which most probably is in-built in Pytorch.
 <p align = 'center'>
             <img src = "https://user-images.githubusercontent.com/42317258/110780619-e7252100-828a-11eb-8818-6432ca5bdb63.png" />
 </p>
+
+[Blog](https://towardsdatascience.com/when-conventional-wisdom-fails-revisiting-data-augmentation-for-self-driving-cars-4831998c5509)
+
+<p align = 'center',id = 'gap'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110781371-d32def00-828b-11eb-9476-9981176a11c3.png" />
+</p>
+
+`The fully connected layers are prone to overfitting, thus hampering the generalization ability of the overall network. Dropout is proposed by Hinton et al. as a regularizer which randomly sets half of the activations to the fully connected layers to zero during training. It has improved generalization ability and largely prevents overfitting.`
+
+`Instead of adding fully connected layers on top of the feature maps, we take the average of each feature map, and the resulting vector is fed directly into the softmax layer.`
+
+- 1. It is more native to the convolution structure by enforcing correspondences between feature maps and categories, thus, the feature maps can be easily interpreted as categories-confidence maps. 
+
+- 2. No parameter to optimize in the global average pooling, thus overfitting is avoided at this layer
+
+- 3. GAP sums out the spatial information, this is more robust to the spatial translation of the input. 
+
+![combine_images (3)](https://user-images.githubusercontent.com/42317258/110782492-353b2400-828d-11eb-9fef-d11be9d1ef54.jpg)
+
+[GAP: Network in Network](/Papers/GAP-Network-In-Network.pdf)
