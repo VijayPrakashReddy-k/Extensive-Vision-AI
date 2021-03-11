@@ -125,8 +125,8 @@ Simple Stuff which most probably is in-built in Pytorch.
 
   [1. ELASTIC DISTORTION - 2003](./CONTENT.md/#distortion)
 
-  [2. CUTOUT - 29 Nov 2017](./CONTENT.md/#cutout)
+  [2. CUTOUT - 29 Nov 2017](CONTENT.md/#cutout)
 
   [3. MIXUP - 27 April 2018](./CONTENT.md/#mixup)
 
-  [4. RICAP - 22 NOV 2018](./CONTENT.md/#ricap)
+  [4. RICAP - 22 NOV 2018](CONTENT.md/#ricap)
