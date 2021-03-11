@@ -130,3 +130,40 @@ Simple Stuff which most probably is in-built in Pytorch.
   [3. MIXUP - 27 April 2018](./CONTENT.md/#mixup)
 
   [4. RICAP - 22 NOV 2018](CONTENT.md/#ricap)
+
+<p align = 'center',id = 'rmda'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110774161-81816680-8283-11eb-9c04-fd40d6b28288.png" />
+</p>
+
+### AutoAugment:
+
+**Pros:**
+
+    Can be applied directly on the dataset
+    Learned policies can be transferred to a new dataset
+    Achieves State-of-art for ImageNet, CIFAR10, and CIFAR100
+    NAS took CIFAR10 error to 2% (cannot be beaten by humans), AutoAugment with NAS took this number to 1.5%
+
+**Cons:**
+
+    Takes 5000 P100 GPU hours for CIFAR and 15000 GPU hours for ImageNet
+
+![AutoAugment](https://user-images.githubusercontent.com/42317258/110774645-0d938e00-8284-11eb-9023-dccc003cec99.png)
+
+[Reinforcement learning or AutoAugment 24th May 2018](/Papers/RMDAs/AutoAugment.pdf)
+
+### Population-Based Augmentation:
+
+(PBA), which generates nonstationary augmentation policy schedules instead of a fixed augmentation policy.
+
+![PBA2](https://user-images.githubusercontent.com/42317258/110774690-197f5000-8284-11eb-8286-017d7231f5c6.png)
+
+[Population-Based Augmentation14 May 2019](/Papers/RMDAs/Population-Based-Augmentation.pdf)
+
+### PATCH GAUSSIAN:
+
+`Prior work has argued that there is an inherent trade-off between robustness and accuracy, which is exemplified by standard data augment techniques such as Cutout, which improves clean accuracy but not robustness, and additive Gaussian noise, which improves robustness but hurts accuracy. To overcome this trade-off, we introduce Patch Gaussian, a simple augmentation scheme that adds noise to randomly selected patches in an input image. Models trained with Patch Gaussian achieve state of the art on the CIFAR-10 and ImageNet.`
+
+![PatchGuassian](https://user-images.githubusercontent.com/42317258/110774754-27cd6c00-8284-11eb-8633-83632f6f6d36.png)
+
+[Patch Gaussian Augmentation 6 June 2019](/Papers/RMDAs/Patch-Gaussian-Augmentation.pdf)
