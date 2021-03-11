@@ -5,7 +5,7 @@
 
 - [Relationship between Data and Validation Accuracy](./README.md/#datarelation)
 
-- [Data Augmentation](./README.md/#dataaug)
+- [Data Augmentation](README.md/#dataaug)
 
 - [Data Augmentation Strategies](./README.md/#strategies)
 
