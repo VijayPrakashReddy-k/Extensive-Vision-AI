@@ -167,3 +167,14 @@ Simple Stuff which most probably is in-built in Pytorch.
 ![PatchGuassian](https://user-images.githubusercontent.com/42317258/110774754-27cd6c00-8284-11eb-8633-83632f6f6d36.png)
 
 [Patch Gaussian Augmentation 6 June 2019](/Papers/RMDAs/Patch-Gaussian-Augmentation.pdf)
+
+<p align = 'center',id = 'results'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110780573-daa0c880-828a-11eb-9b69-e1650fd3c6e3.png" />
+</p>
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110780628-e8eee480-828a-11eb-8688-9862e02f8663.png" />
+</p>
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110780619-e7252100-828a-11eb-8818-6432ca5bdb63.png" />
+</p>
