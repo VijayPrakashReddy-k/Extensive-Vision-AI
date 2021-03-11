@@ -5,7 +5,7 @@
 
 - [Relationship between Data and Validation Accuracy](./README.md/#datarelation)
 
-- [Data Augmentation](README.md/#dataaug)
+- [Data Augmentation](./README.md/#dataaug)
 
 - [Data Augmentation Strategies](./README.md/#strategies)
 
@@ -98,3 +98,29 @@ have been proposed to help combat over-fitting, but they will fall short if data
       MMDA* - Middle-Class Man's Data Augmentation Strategies
 
       RMDA* - Rich Man's Data Augmentation Strategies
+
+<p align = 'center',id = 'pmda'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110740365-f7bca380-8258-11eb-83e1-58c978d61290.png" />
+</p>
+
+- `Scale; Translation; Rotation; Blurring; Image Mirroring; Color Shifting / Whitening.`
+
+Simple Stuff which most probably is in-built in Pytorch. 
+
+![pmda](https://user-images.githubusercontent.com/42317258/110740248-c348e780-8258-11eb-96a8-281b68a286aa.jpg)
+
+<p align = 'center',id = 'mmda'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110740754-947f4100-8259-11eb-9c6e-39d331d33978.png" />
+</p>
+
+- `ALBUMENTATIONS is easy to integrate with PyTorch.`
+
+![Albumentations](https://user-images.githubusercontent.com/42317258/110740913-d01a0b00-8259-11eb-98ea-22d043cdfaa6.png)
+
+- `It has some nearly everything we'd want:`
+
+![albumentation-exaples](https://user-images.githubusercontent.com/42317258/110740916-d14b3800-8259-11eb-8eb0-e5e3385ee026.jpeg)
+
+- `And smart way of handling Annotations`
+
+![albumentation-annotations](https://user-images.githubusercontent.com/42317258/110740929-d4debf00-8259-11eb-9e53-f8908ad1f163.jpeg)
