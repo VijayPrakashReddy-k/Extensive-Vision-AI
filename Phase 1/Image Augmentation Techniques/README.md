@@ -188,3 +188,29 @@ Affine distortions greatly improved results on the MNIST database. However,best 
 </p>
 
 [MIXUP - 27 April 2018](Papers/MMDA/MIXUP_2018_27_04/mixup-BEYOND-EMPIRICAL-RISK-MINIMIZATION.pdf)
+
+<p align = 'center',id = 'ricap'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110757113-0616b980-8271-11eb-9bc5-d916b32e4d0a.png" />
+</p>
+
+`RICAP crops four training images and patches them to construct a new training image; it selects images and determines the cropping sizes randomly, where the size of the final image is identical to that of the original image.  RICAP also mixes class labels of the four images with ratios proportional to the areas of the four images like label smoothing in mixup. Compared to mixup, RICAP has three clear distinctions: it mixes images spatially, it uses partial images by cropping, and it does not create features that are absent in the original dataset except for boundary patching.`
+
+### RICAP process:
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110757140-0f078b00-8271-11eb-8589-2fbd8ba2c94b.png" />
+</p>
+
+### RICAP results:
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110757147-10d14e80-8271-11eb-8286-9e921a737ba6.png" />
+</p>
+
+### RICAP output:
+
+<p align = 'center'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110757153-12027b80-8271-11eb-8c1d-ac996430787f.png" />
+</p>
+
+[RICAP - 22 NOV 2018](Papers/MMDA/RICAP_2018_22_11/RICAP.pdf)
