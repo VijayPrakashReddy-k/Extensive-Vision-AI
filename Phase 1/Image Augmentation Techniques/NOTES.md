@@ -20,6 +20,10 @@
 
 #### Grad-CAM:
 
+[Gradient Class Activation Maps Excellent Blog](https://glassboxmedicine.com/2020/05/29/grad-cam-visual-explanations-from-deep-networks/)
+
+[Another Good Blog](https://medium.com/@stepanulyanin/implementing-grad-cam-in-pytorch-ea0937c31e82)
+
 [Grad-CAM: Gradient-weighted Class Activation Mapping](http://gradcam.cloudcv.org/)
 
 [Grad-CAM github repo](https://github.com/ramprs/grad-cam)
