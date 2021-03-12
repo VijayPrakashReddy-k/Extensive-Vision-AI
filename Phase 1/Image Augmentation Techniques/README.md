@@ -203,6 +203,8 @@ Simple Stuff which most probably is in-built in Pytorch.
             <img src = "https://user-images.githubusercontent.com/42317258/110893201-85f95e00-831b-11eb-8967-38e052af1cf7.png" />
 </p>
 
+- **`Gradient-weighted Class Activation Mapping (GradCAM) : Visual Explanations from Deep Networks via Gradient-based Localization`**
+
 `Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any target concept (say logits for 'dog' or even a caption), flowing into the final convolutional layer to produce a coarse localization map highlighting the important regions in the image for predicting the concept.`
 
 - `We take the final convolutional feature map, and then we weight every channel in that feature with the gradient of the class with respect to the channel. It tells us how intensely the input image activates different channels by how important each channel is with regard to the class. It does not require any re-training or change in the existing architecture.`
