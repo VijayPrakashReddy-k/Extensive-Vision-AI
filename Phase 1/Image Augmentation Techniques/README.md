@@ -198,3 +198,39 @@ Simple Stuff which most probably is in-built in Pytorch.
 ![combine_images (3)](https://user-images.githubusercontent.com/42317258/110782492-353b2400-828d-11eb-9fef-d11be9d1ef54.jpg)
 
 [GAP: Network in Network](/Papers/GAP-Network-In-Network.pdf)
+
+<p align = 'center',id = 'cam'>
+            <img src = "https://user-images.githubusercontent.com/42317258/110893201-85f95e00-831b-11eb-8967-38e052af1cf7.png" />
+</p>
+
+`Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any target concept (say logits for 'dog' or even a caption), flowing into the final convolutional layer to produce a coarse localization map highlighting the important regions in the image for predicting the concept.`
+
+- `We take the final convolutional feature map, and then we weight every channel in that feature with the gradient of the class with respect to the channel. It tells us how intensely the input image activates different channels by how important each channel is with regard to the class. It does not require any re-training or change in the existing architecture.`
+
+    - Applicable to any CNN based network without requiring any changes (like GAP requirement)
+
+    - It can be applied to classification, captioning or Visual QA problems
+
+![network](https://user-images.githubusercontent.com/42317258/110893722-880fec80-831c-11eb-8f96-89d0d6024f1d.png)
+
+**Steps:**
+
+    1.Load a pre-trained model
+    
+    2.Load an image which can be processed by this model (224x224 for VGG16 why?)
+    
+    3.Infer the image and get the topmost class index
+    
+    4.Take the output of the final convolutional layer
+    
+    5.Compute the gradient of the class output value w.r.t to L feature maps
+    
+    6.Pool the gradients over all the axes leaving out the channel dimension
+    
+    7.Weigh the output feature map with the computed gradients (+ve)
+    
+    8.Average the weighted feature maps along channels
+    
+    9.Normalize the heat map to make the values between 0 and 1
+    
+[GradCAM](http://gradcam.cloudcv.org/)  
