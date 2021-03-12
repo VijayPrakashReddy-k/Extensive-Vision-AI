@@ -23,3 +23,5 @@
 [Grad-CAM: Gradient-weighted Class Activation Mapping](http://gradcam.cloudcv.org/)
 
 [Grad-CAM github repo](https://github.com/ramprs/grad-cam)
+
+[Grad-CAM youtube](https://www.youtube.com/watch?time_continue=129&v=COjUB9Izk6E&feature=emb_logo)
