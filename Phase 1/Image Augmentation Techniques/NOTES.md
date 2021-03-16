@@ -29,3 +29,27 @@
 [Grad-CAM github repo](https://github.com/ramprs/grad-cam)
 
 [Grad-CAM youtube](https://www.youtube.com/watch?time_continue=129&v=COjUB9Izk6E&feature=emb_logo)
+
+#### Trainable vs. Post-Hoc Attention Mechanisms
+
+`When training an image model, we want the model to be able to focus on important parts of the image. One way of accomplishing this is through trainable attention mechanisms. In this post we will first discuss the difference between post-hoc vs. trainable attention and soft vs. hard attention.`
+
+**Note: attention is also used extensively in natural language processing. The focus of this post is attention in computer vision tasks.**
+
+**`What is Attention?`**
+
+- `definition (1): trainable attention: a group of techniques that help a “model-in-training” notice important things more effectively` and
+
+- `definition (2): post-hoc attention: a group of techniques that help humans visualize what an already-trained model thinks is important`
+
+![grad-cam-etc-tree-1](https://user-images.githubusercontent.com/42317258/111259001-1699ac00-8644-11eb-8913-f8055f1a12bf.png)
+
+#### Summary:
+
+- `Trainable attention mechanisms have attention weights that are learned during training, which help the model focus on key parts of images important for the task;`
+
+- `Post-hoc attention mechanisms are techniques applied after a model is finished training, and are intended to provide insight into where the model is looking when it makes predictions;`
+
+- `Hard attention is image cropping and can be trained using REINFORCE. Soft attention produces “hazier” focus region(s) and can be trained using regular backpropagation.`
+
+- `“Learn to Pay Attention” is an interesting paper demonstrating how soft trainable attention can improve image classification performance and highlight key parts of images.`
