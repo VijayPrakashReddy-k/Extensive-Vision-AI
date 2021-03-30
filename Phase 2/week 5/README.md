@@ -232,11 +232,3 @@ Despite many years of research, however, pose estimation remains a very difficul
 - [SuperResolution to ONNX](https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html)
 
 [ONNX.js](https://microsoft.github.io/onnxjs-demo/#/)
-
-![HPE-assignment](https://user-images.githubusercontent.com/42317258/108237213-aa737780-716d-11eb-8eaf-555bc1979335.png)
-
-[Simple Baseline for HPE and tracking](https://arxiv.org/pdf/1804.06208.pdf)
-
-[paper](https://github.com/Microsoft/human-pose-estimation.pytorch)
-
-[models](https://onedrive.live.com/?authkey=%21AFkTgCsr3CT9%2D%5FA&id=56B9F9C97F261712%2110709&cid=56B9F9C97F261712)
