@@ -50,7 +50,7 @@
 
 - `Obtaining high resolution feature maps is crucial whatever the way it is obtained. In the following code we can appriciate its network and understand its implementation.`
 
-**Three deconvolutional layers with batch norm and ReLU act. are used. Each layer had 256 filters with 4x4 kernels with stride of 2 (weird no ? since we generally prefer to use 3x3 with stride on 1 and then do max pool)**
+**Three deconvolutional layers with batch norm and ReLU activation are used. Each layer had 256 filters with 4x4 kernels with stride of 2 (weird no ? since we generally prefer to use 3x3 with stride on 1 and then do max pool)**
 
 The following is a torn down version of the network to understand its implementation
 
@@ -154,3 +154,114 @@ class PoseResNet(nn.Module):
         return x
         
  ```
+### 1.2 JointsMSELoss
+
+`The loss is a simple `**`0.5 * sqrt(joint_coord - target_coord)^2`**` , but also the target coordinates of the joint in the ground truth can have weights assigned to them, so that specific joints can be trained more/ penalised more.`
+
+- When using the [MPII Dataset](http://human-pose.mpi-inf.mpg.de/), there are going to be 16 joints predicted, i.e. 16 layers in the output of the model.
+
+- Here, the max values in the heatmaps are obtained first, this will most probably give the right prediction, but we can do further post-processing to get the exact centre of the prediction, which is done by applying 2D gaussian centered on the heatmap.
+
+```python
+class JointsMSELoss(nn.Module):
+    def __init__(self, use_target_weight):
+        super(JointsMSELoss, self).__init__()
+        self.criterion = nn.MSELoss(size_average=True)
+        self.use_target_weight = use_target_weight
+
+    def forward(self, output, target, target_weight):
+        batch_size = output.size(0)
+        num_joints = output.size(1)
+        heatmaps_pred = output.reshape((batch_size, num_joints, -1)).split(1, 1)
+        heatmaps_gt = target.reshape((batch_size, num_joints, -1)).split(1, 1)
+        loss = 0
+
+        for idx in range(num_joints):
+            heatmap_pred = heatmaps_pred[idx].squeeze()
+            heatmap_gt = heatmaps_gt[idx].squeeze()
+            if self.use_target_weight:
+                loss += 0.5 * self.criterion(
+                    heatmap_pred.mul(target_weight[:, idx]),
+                    heatmap_gt.mul(target_weight[:, idx])
+                )
+            else:
+                loss += 0.5 * self.criterion(heatmap_pred, heatmap_gt)
+
+        return loss / num_joints
+        
+```
+### Key Highlights:
+
+- **Model Conversion & Inferencing**
+
+    Defined an inference class to manage the joints, pairs, defining the model, image transformation and model conversion. Bascially an modularized code.
+ONNX Conversion, Model converted to ONNX format with int8 quantization which resulted in ~2x reduction in model size (136 mb to 66 mb) and inference speed improvement by ~1.6x(519.18 ms to 316.61 ms)
+
+```python
+def get_max_preds(batch_heatmaps):
+    '''
+    get predictions from score maps
+    heatmaps: numpy.ndarray([batch_size, num_joints, height, width])
+    '''
+    assert isinstance(batch_heatmaps, np.ndarray), \
+        'batch_heatmaps should be numpy.ndarray'
+    assert batch_heatmaps.ndim == 4, 'batch_images should be 4-ndim'
+
+    batch_size = batch_heatmaps.shape[0]
+    num_joints = batch_heatmaps.shape[1]
+    width = batch_heatmaps.shape[3]
+    heatmaps_reshaped = batch_heatmaps.reshape((batch_size, num_joints, -1))
+    idx = np.argmax(heatmaps_reshaped, 2)
+    maxvals = np.amax(heatmaps_reshaped, 2)
+
+    maxvals = maxvals.reshape((batch_size, num_joints, 1))
+    idx = idx.reshape((batch_size, num_joints, 1))
+
+    preds = np.tile(idx, (1, 1, 2)).astype(np.float32)
+
+    preds[:, :, 0] = (preds[:, :, 0]) % width
+    preds[:, :, 1] = np.floor((preds[:, :, 1]) / width)
+
+    pred_mask = np.tile(np.greater(maxvals, 0.0), (1, 1, 2))
+    pred_mask = pred_mask.astype(np.float32)
+
+    preds *= pred_mask
+    return preds, maxvals
+
+
+def get_final_preds(config, batch_heatmaps, center, scale):
+    coords, maxvals = get_max_preds(batch_heatmaps)
+
+    heatmap_height = batch_heatmaps.shape[2]
+    heatmap_width = batch_heatmaps.shape[3]
+
+    # post-processing
+    if config.TEST.POST_PROCESS:
+        for n in range(coords.shape[0]):
+            for p in range(coords.shape[1]):
+                hm = batch_heatmaps[n][p]
+                px = int(math.floor(coords[n][p][0] + 0.5))
+                py = int(math.floor(coords[n][p][1] + 0.5))
+                if 1 < px < heatmap_width-1 and 1 < py < heatmap_height-1:
+                    diff = np.array([hm[py][px+1] - hm[py][px-1],
+                                     hm[py+1][px]-hm[py-1][px]])
+                    coords[n][p] += np.sign(diff) * .25
+
+    preds = coords.copy()
+
+    # Transform back
+    for i in range(coords.shape[0]):
+        preds[i] = transform_preds(coords[i], center[i], scale[i],
+                                   [heatmap_width, heatmap_height])
+
+    return preds, maxvals
+    
+```
+- **Plotting using openCV**
+
+    Heatmaps of each joints are converted into point using **openCV min_max point with probability**. Used **openCV elllipse and line function** to draw the joints and join the joints with given color pattern
+
+- **Deployment**
+
+    ONNX quantilized model deployed on AWS Lambda and model is inferred using ONNX runtime.
+    Image being resized and normalized using Albumentation instead of torchvision.transforms().
